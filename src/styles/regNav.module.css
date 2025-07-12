@@ -1,0 +1,7 @@
+.navContainer {
+  @apply flex flex-row items-center w-[390px] h-[56px] justify-end;
+}
+
+.navBack {
+  @apply flex items-center w-[20px] h-[19px] justify-center rounded-[58px] order-2 mr-[23px];
+}

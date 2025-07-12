@@ -9,6 +9,10 @@ import FactSvg from '@svg/FactSvg';
 import HomeSvg from '@svg/HomeSvg';
 import StarSvg from '@svg/StarSvg';
 import WikipediaSvg from '@svg/WikipediaSvg';
+// eslint-disable-next-line import/no-named-as-default
+import SocialSvg from '@svg/SocialSvg';
+import ArrowLeftSvg from '@svg/ArrowLeftSvg';
+import ArrowRightSvg from '@svg/ArrowRightSvg';
 
 /* Exporting the svg files from the svg folder. */
 export {
@@ -23,4 +27,7 @@ export {
   HomeSvg,
   StarSvg,
   WikipediaSvg,
+  SocialSvg,
+  ArrowLeftSvg,
+  ArrowRightSvg,
 };

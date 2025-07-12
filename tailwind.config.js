@@ -18,7 +18,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        peyda: ['Peyda', 'sans-serif'],
+        peyda: ['Peyda', 'sans‑serif'],
+        inter: ['Inter', 'sans‑serif'],
+        manrope: ['Manrope', 'sans‑serif'],
       },
     },
   },

@@ -1,0 +1,8 @@
+.phoneFieldContainer {
+  @apply font-manrope font-normal text-base leading-6 flex items-center placeholder-[#7D7D7D] bg-[#232323] order-1 focus:outline-none focus:ring-0;
+}
+
+.preNumber {
+  @apply flex flex-row items-start p-2 gap-2 w-[47px] h-[40px] rounded-xl;
+  @apply font-inter font-normal text-base;
+}

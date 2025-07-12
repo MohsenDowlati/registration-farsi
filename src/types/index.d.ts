@@ -1,5 +1,8 @@
 declare namespace cat {
-  type BottomNavigation = Array<{ id: number; label: string; href: string; icon: JSX.Element }>;
+  type Nav = {
+    skip: boolean;
+  };
+  type RegisterNavigation = { id: number; href: string };
   type Breed = {
     adaptability: number;
     affection_level: number;

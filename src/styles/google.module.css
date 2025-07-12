@@ -1,0 +1,15 @@
+.googleAuthContainer {
+  @apply w-[343px] h-[16px] flex flex-row justify-center items-center gap-1 mb-4;
+}
+
+.googleAuthSplitter {
+  @apply w-[164px] h-0 border-[1px] border-solid border-[#4C4C4C];
+}
+
+.googleAuthOr {
+  @apply w-[8px] h-[16px] font-manrope font-medium text-[12px] leading-[16px] flex items-center justify-center text-[#CECECE];
+}
+
+.googleAuthText {
+  @apply w-[74px] h-[15px] font-peyda font-medium text-[13px] leading-[15px] flex items-center justify-center text-[#CACACA];
+}

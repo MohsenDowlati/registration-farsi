@@ -7,6 +7,23 @@ const Text = {
     'register-signup': 'ثبت‌ نام',
     'register-login': 'ورود',
   },
+  navbar: {
+    'navbar-skip': 'رد کردن',
+  },
+  phone: {
+    'register-phone-header': 'وقت ثبت‌نامه! بیا شروع کنیم!',
+    'register-phone-default-number': '9192054609',
+    'register-phone-default-pre-number': '+98',
+    'register-phone-description-first': 'با ادامه دادن این مرحله، شما با ',
+    'register-phone-description-terms-of-use': 'شرایط استفاده ',
+    'register-phone-description-and': 'و ',
+    'register-phone-description-privacy-policy': 'سیاست حفظ حریم خصوصی ما ',
+    'register-phone-description-end': ' موافقت می‌کنید.',
+  },
+  google: {
+    'google-header': 'یا',
+    'google-auth': 'ورود با Google',
+  },
 };
 
 export default Text;

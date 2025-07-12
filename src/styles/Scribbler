@@ -1,15 +1,10 @@
-/* Frame 1 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 8px;
+/* Vector */
 
 position: absolute;
-width: 338px;
-height: 130px;
-left: 27px;
-top: 80px;
+left: 20.83%;
+right: 20.83%;
+top: 25%;
+bottom: 25%;
 
+border: 1.5px solid #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);

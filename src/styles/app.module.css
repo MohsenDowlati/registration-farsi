@@ -9,4 +9,12 @@
 .bgError {
   @apply bg-[#E53935] text-[#FFFFFF];
 }
-/*TODO: applying fonts*/
+
+.textField {
+  @apply bg-[#232323] box-border flex flex-row items-center py-2 px-2 gap-4 w-[343px] h-[56px]
+  border-[1px] border-solid border-[#4C4C4C] rounded-2xl;
+}
+
+.nextBtn {
+  @apply absolute w-[56px] h-[56px] left-[calc(50%-28px-144px)] top-[730px] rounded-full flex items-center justify-center;
+}

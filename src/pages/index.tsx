@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-named-as-default
+import React from 'react';
 import Register from '@/pages/register/register';
 
 // TODO: add context

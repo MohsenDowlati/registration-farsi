@@ -1,0 +1,11 @@
+.headerPhone {
+  @apply w-[343px] h-10 font-peyda font-bold text-[24px] leading-10 flex justify-center items-center text-center text-white mb-[56px];
+}
+
+.acceptTerms {
+  @apply w-[343px] h-[30px] font-peyda font-light text-[13px] leading-[15px] flex items-center text-center text-[#CACACA] my-4;
+}
+
+.headlight {
+  @apply text-[#F9C74F]
+}
