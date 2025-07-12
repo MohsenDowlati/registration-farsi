@@ -17,6 +17,9 @@ module.exports = {
           },
         },
       },
+      fontFamily: {
+        peyda: ['Peyda', 'sans-serif'],
+      },
     },
   },
   plugins: [],

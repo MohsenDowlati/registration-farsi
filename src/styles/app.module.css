@@ -1,0 +1,12 @@
+.bgPrimary {
+    @apply bg-[#F9C74F] text-[#363537];
+}
+
+.bgSecondary {
+    @apply bg-[#933147] text-[#F5F5F5];
+}
+
+.bgError {
+  @apply bg-[#E53935] text-[#FFFFFF];
+}
+/*TODO: applying fonts*/

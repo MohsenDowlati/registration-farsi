@@ -1,13 +1,10 @@
-/**
- * It returns a bunch of meta tags that are used by the browser to display the app in the browser
- * @returns A React element.
- */
-function Meta(): JSX.Element {
+// eslint-disable-next-line react/function-component-definition
+const Meta: React.FC = () => {
   return (
     <>
-      <title>Cats Realm</title>
+      <title>Danamit</title>
       <meta charSet="utf-8" />
-      <meta name="author" content="Ajay Kanniyappan" />
+      <meta name="author" content="Mohsen" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       {/* KEYWORDS */}
       <meta name="title" content="The Next.js Progressive Web App Template" />
@@ -60,6 +57,6 @@ function Meta(): JSX.Element {
       />
     </>
   );
-}
+};
 
 export default Meta;

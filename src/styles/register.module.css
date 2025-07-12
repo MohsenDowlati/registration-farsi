@@ -1,0 +1,19 @@
+.headerTitle {
+  @apply w-[338px] h-[82px] font-peyda font-bold text-[34px] leading-[41px] mb-[8px] text-center text-[#F5F5F5] self-stretch select-none
+}
+
+.headerDescription {
+  @apply w-[338px] h-[40px] font-peyda font-normal text-[14px] leading-[20px] text-center text-[#CACACA] order-1 self-stretch select-none
+}
+
+.imageContainer {
+  @apply container w-[345px] h-[410px] bg-[#2B2B2B] border-none mb-7;
+}
+
+.containerLayout {
+  @apply container w-[352px] h-[713.1px] mx-[21px];
+}
+
+.headerContainer {
+  @apply flex flex-col items-start p-0 gap-2 w-[338px] h-[130px] mb-[22px];
+}

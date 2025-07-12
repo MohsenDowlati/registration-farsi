@@ -1,0 +1,15 @@
+/* Frame 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 338px;
+height: 130px;
+left: 27px;
+top: 80px;
+

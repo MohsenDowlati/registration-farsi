@@ -1,0 +1,6 @@
+.btn_main {
+    @apply flex flex-row justify-center items-center py-[15.5493px] px-[57.437px] gap-[7.77px] w-[352px] h-[55.1px] rounded-[48.5916px];
+    @apply font-peyda font-semibold text-[15.5493px] leading-[23px] order-1 select-none mb-[12.9px];
+}
+
+
