@@ -13,7 +13,7 @@ const GoogleLogin: React.FC = () => {
         <p className={style.googleAuthOr}>{Text.google['google-header']}</p>
         <div className={style.googleAuthSplitter} />
       </div>
-      <div className={`${app.textField} flex justify-center items-center`}>
+      <div className={`${app.textField} flex justify-center items-center border-[#4C4C4C]`}>
         <p dir="rtl" className={style.googleAuthText}>
           {Text.google['google-auth']}
         </p>

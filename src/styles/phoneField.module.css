@@ -1,5 +1,13 @@
 .phoneFieldContainer {
-  @apply font-manrope font-normal text-base leading-6 flex items-center placeholder-[#7D7D7D] bg-[#232323] order-1 focus:outline-none focus:ring-0;
+  @apply font-manrope font-normal text-base leading-6 flex items-center bg-[#232323] order-1 focus:outline-none focus:ring-0;
+}
+
+.placeHolderOK {
+  @apply placeholder-[#7D7D7D];
+}
+
+.placeHolderError {
+  @apply placeholder-[#FF0000];
 }
 
 .preNumber {

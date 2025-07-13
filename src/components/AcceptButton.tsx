@@ -17,7 +17,7 @@ const AcceptButton: React.FC<AcceptButtonProps> = ({ link, isOK }) => {
     router.push(link);
   };
   return (
-    <div className={`${app.nextBtn} ${isOK ? app.bgPrimary : app.bgSecondary}`}>
+    <div className={`${app.nextBtn} ${isOK ? app.bgPrimary : app.bgError}`}>
       <ArrowLeftSvg onClick={handleNavigation} className="" />
     </div>
   );
