@@ -1,0 +1,57 @@
+.nameInput {
+  @apply font-peyda font-normal text-base leading-6 flex items-center bg-[#232323] order-1 focus:outline-none focus:ring-0 mr-4;
+}
+
+.nameHeader {
+  @apply w-[343px] h-[40px] font-peyda font-bold text-[24px] leading-10 flex justify-center items-center text-center text-[#FFFFFF] mb-[56px];
+}
+
+.inputsContainer {
+  @apply w-[343px] h-[240px] flex items-center flex-col justify-between absolute left-1/2 top-1/2
+  transform -translate-x-1/2 -translate-y-1/2
+  z-10;
+}
+
+.nameUserHeader {
+  @apply w-[343px] h-[24px] font-peyda font-normal text-base leading-6 flex items-center text-center justify-center self-stretch text-white;
+}
+
+.warningContainer {
+  @apply box-border w-[343px] h-[128px] bg-[#232323] rounded-b-[16px] border border-solid z-0
+  transform translate-y-[172px] translate-x-[23.76px];
+}
+
+.warningContainerOK {
+  @apply border-[#F9C74F];
+}
+
+.warningContainerERROR {
+  @apply border-[#FF0004];
+}
+
+.warningText {
+  @apply h-[28px] font-peyda font-normal text-sm leading-6 flex items-center text-right mr-[21px];
+}
+
+.warningTextOK {
+  @apply text-[#F9C74F];
+}
+
+.warningTextERROR {
+  @apply text-[#FF0004];
+}
+
+.userNameHeader {
+  @apply w-[343px] h-[40px] font-peyda font-bold text-[24px] leading-6
+  flex items-center justify-center text-center text-[#FFFFFF] mb-[56px] mt-6;
+}
+
+.userNameUsername {
+  @apply w-[161px] h-[40px] font-peyda font-normal text-[32px] leading-10
+  flex items-center text-center text-[#FFFFFF] mb-[16px];
+}
+
+.userNameAgain {
+  @apply w-[110px] h-[24px] font-peyda font-semibold text-base leading-6
+  flex items-center text-center text-[#F9C74F];
+}

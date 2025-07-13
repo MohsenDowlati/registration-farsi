@@ -5,12 +5,14 @@ import { createWrapper } from 'next-redux-wrapper';
 // eslint-disable-next-line import/no-cycle
 import phoneReducer from './phoneSlice';
 import otpReducer from './otpSlice';
+import userReducer from './usernameSlice';
 
 export const makeStore = () =>
   configureStore({
     reducer: {
       phone: phoneReducer,
       otp: otpReducer,
+      username: userReducer,
     },
   });
 

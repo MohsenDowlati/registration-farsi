@@ -7,7 +7,7 @@
 }
 
 .bgError {
-  @apply bg-[#E53935] text-[#FFFFFF];
+  @apply bg-[#E53935] text-[#FFFFFF] shadow-[0_0_5px_#E53935];
 }
 
 .textField {
@@ -20,7 +20,7 @@
 }
 
 .textFieldError {
-  @apply border-[#FF0000]
+  @apply border-[#FF0000] shadow-[0_0_5px_#FF0004];
 }
 
 .textFieldOK {

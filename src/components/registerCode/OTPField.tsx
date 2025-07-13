@@ -29,7 +29,7 @@ const OTPField: React.FC<OTPFieldProps> = ({ length = 6, isOkay, onComplete }) =
     setValues(next);
 
     if (idx < length - 1) {
-      inputsRef.current[idx+1]?.focus();
+      inputsRef.current[idx + 1]?.focus();
     }
 
     if (next.every((c) => c !== '')) {

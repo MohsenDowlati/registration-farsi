@@ -23,7 +23,7 @@ const EntryCode: React.FC = () => {
         <p className={style.otpText}>{Texts.codeOTP['code-sub']}</p>
         <p className={style.otpLink}>{Texts.codeOTP['code-sub-link']}</p>
       </div>
-      <AcceptButton link="" isOK={isOkay} />
+      <AcceptButton link={registerNavigation.Name} isOK={isOkay} />
     </section>
   );
 };

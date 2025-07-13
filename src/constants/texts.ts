@@ -30,4 +30,19 @@ export const Text = {
     'code-sub': 'نگرفتی؟',
     'code-sub-link': 'دوباره بفرست.',
   },
+  Name: {
+    'name-header': 'اسمت چیه؟',
+    'name-input-first-name': 'نام',
+    'name-input-last-name': 'نام خانوادگی',
+    'name-input-user-name': 'اسم نمایشی',
+    'name-user-name-header': 'خیلیا یه اسم خفن  هم واسه خودشون می‌سازن!',
+    'name-warning1': 'نباید فاصله داشته باشه',
+    'name-warning2': 'حداقل ۳ حرف باشه',
+    'name-warning3': 'فقط از حروف، اعداد و _ استفاده شه',
+  },
+  Username: {
+    'username-header': 'نام کاربری',
+    'username-username': '@katatonia',
+    'username-another': 'تغییر نام کاربری',
+  },
 };

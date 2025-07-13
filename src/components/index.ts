@@ -6,6 +6,7 @@ import PhoneField from '@/components/phone/PhoneField';
 import GoogleLogin from '@components/GoogleLogin';
 import AcceptButton from '@components/AcceptButton';
 import OTPField from '@components/registerCode/OTPField';
+import NameInput from '@components/name/NameInput';
 import Meta from './Meta';
 
-export { Meta, Header, Button, RegNav, PhoneField, GoogleLogin, AcceptButton, OTPField};
+export { Meta, Header, Button, RegNav, PhoneField, GoogleLogin, AcceptButton, OTPField, NameInput };

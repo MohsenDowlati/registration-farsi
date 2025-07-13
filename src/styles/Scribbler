@@ -1,6 +1,6 @@
-/* دوباره بفرست. */
+/* تغییر نام کاربری */
 
-width: 91px;
+width: 98px;
 height: 24px;
 
 font-family: 'Peyda';
@@ -18,5 +18,5 @@ color: #F9C74F;
 
 /* Inside auto layout */
 flex: none;
-order: 0;
+order: 1;
 flex-grow: 0;
