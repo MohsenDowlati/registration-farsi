@@ -1,3 +1,3 @@
-import Text from './texts';
+import { Text } from './texts';
 
 export default Text;

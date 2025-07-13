@@ -5,6 +5,7 @@ import PhoneField from '@/components/phone/PhoneField';
 // eslint-disable-next-line import/no-named-as-default
 import GoogleLogin from '@components/GoogleLogin';
 import AcceptButton from '@components/AcceptButton';
+import OTPField from '@components/registerCode/OTPField';
 import Meta from './Meta';
 
-export { Meta, Header, Button, RegNav, PhoneField, GoogleLogin, AcceptButton };
+export { Meta, Header, Button, RegNav, PhoneField, GoogleLogin, AcceptButton, OTPField};

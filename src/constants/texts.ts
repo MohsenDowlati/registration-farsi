@@ -1,4 +1,5 @@
-const Text = {
+// eslint-disable-next-line import/prefer-default-export
+export const Text = {
   register: {
     'register-title-top': 'آزمون',
     'register-title-bottom': 'خود را بسازید',
@@ -24,6 +25,9 @@ const Text = {
     'google-header': 'یا',
     'google-auth': 'ورود با Google',
   },
+  codeOTP: {
+    'code-header': 'کدی که برات پیامک کردیم رو وارد کن.',
+    'code-sub': 'نگرفتی؟',
+    'code-sub-link': 'دوباره بفرست.',
+  },
 };
-
-export default Text;

@@ -27,7 +27,7 @@ const Phone: React.FC = () => {
         </p>
       </div>
       <GoogleLogin />
-      <AcceptButton link="" isOK={isOK} />
+      <AcceptButton link={registerNavigation.EntryCode} isOK={isOK} />
     </section>
   );
 };

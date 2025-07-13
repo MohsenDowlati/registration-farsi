@@ -1,3 +1,4 @@
+import React from 'react';
 import style from '@/styles/register.module.css';
 import Text from '../../constants';
 

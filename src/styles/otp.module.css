@@ -1,0 +1,19 @@
+.otpInput {
+  @apply w-[20px] h-[20px] flex justify-center items-center placeholder-[#7D7D7D] bg-[#232323] font-manrope font-normal text-base leading-6 order-1 focus:outline-none focus:ring-0 text-center;
+}
+
+.otpHeader {
+  @apply w-[343px] h-20 px-6 font-peyda font-bold text-[24px] leading-10 flex items-center text-center text-[#FFFFFF] mb-14;
+}
+
+.otpText{
+  @apply w-[52px] h-6 font-peyda font-semibold text-base leading-6 flex items-center text-center text-[#FFFFFF] ml-2;
+}
+
+.otpLink {
+  @apply w-[91px] h-6 font-peyda font-semibold text-base leading-6 flex items-center text-center text-[#F9C74F] mr-2;
+}
+
+.otpTextContainer {
+  @apply flex flex-row justify-center items-center p-2 w-full;
+}

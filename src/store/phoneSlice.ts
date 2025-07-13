@@ -11,7 +11,7 @@ interface PhoneState {
 const initialState: PhoneState = {
   value: '',
   isOK: false,
-  isSelected: true,
+  isSelected: false,
 };
 
 const phoneSlice = createSlice({

@@ -14,7 +14,9 @@ interface AcceptButtonProps {
 const AcceptButton: React.FC<AcceptButtonProps> = ({ link, isOK }) => {
   const router = useRouter();
   const handleNavigation = () => {
-    router.push(link);
+    if (isOK) {
+      router.push(link);
+    }
   };
   return (
     <div className={`${app.nextBtn} ${isOK ? app.bgPrimary : app.bgError}`}>
