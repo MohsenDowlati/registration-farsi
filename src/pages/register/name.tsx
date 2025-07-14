@@ -39,7 +39,7 @@ const Name: React.FC = () => {
     <section>
       <RegNav link={registerNavigation.Phone} />
       <h1 className={style.nameHeader}>{Texts.Name['name-header']}</h1>
-      <div className="relative w-full ">
+      <div className="relative w-full mt-[50px]">
         <div className={style.inputsContainer}>
           <NameInput
             text={Texts.Name['name-input-first-name']}

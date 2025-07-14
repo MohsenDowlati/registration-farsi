@@ -1,22 +1,20 @@
-/* تغییر نام کاربری */
+/* 19 تا 24 سال */
 
-width: 98px;
+position: absolute;
+width: 67px;
 height: 24px;
+left: 101px;
+top: 107px;
 
 font-family: 'Peyda';
 font-style: normal;
-font-weight: 600;
-font-size: 16px;
+font-weight: 400;
+font-size: 14px;
 line-height: 24px;
-/* identical to box height, or 150% */
+/* identical to box height, or 171% */
 display: flex;
 align-items: center;
 text-align: center;
 
-color: #F9C74F;
+color: #DBDBDB;
 
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;

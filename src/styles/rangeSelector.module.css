@@ -1,0 +1,88 @@
+.container {
+  position: relative;
+  width: 100%;
+  padding: 40px 0; /* space for tooltip */
+}
+
+.slider {
+  position: relative;
+  height: 6px;
+  width: 100%;
+}
+
+/* full background track */
+.track {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+}
+
+/* colored segment between thumbs */
+.range {
+  position: absolute;
+  height: 6px;
+  background: #C94C4C;
+  border-radius: 3px;
+}
+
+/* hide the native input but keep its thumb */
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  -webkit-appearance: none;
+}
+.thumb::-webkit-slider-thumb {
+  pointer-events: all;
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #C94C4C;
+  cursor: grab;
+}
+.thumb::-moz-range-thumb {
+  pointer-events: all;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #C94C4C;
+  cursor: grab;
+}
+
+/* left handle sits above right when they overlap */
+.thumbLeft {
+  z-index: 2;
+}
+
+/* tooltip box */
+.tooltip {
+  position: absolute;
+  top: -36px;          /* above the track */
+  width: 72px;         /* adjust as needed */
+  padding: 4px 0;
+  background: #C94C4C;
+  color: white;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* the little triangle under the tooltip */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #C94C4C transparent transparent transparent;
+}

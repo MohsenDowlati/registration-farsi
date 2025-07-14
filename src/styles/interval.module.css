@@ -1,0 +1,41 @@
+.intervalPiece {
+  @apply h-[51.57px] w-0 border-[0.75579px] border-solid mx-[2px];
+}
+
+.intervalPieceUnselected {
+  @apply border-[#F9C74F]
+}
+
+.intervalPieceSelected {
+  @apply border-[#933147]
+}
+
+.intervalContainer {
+  @apply flex flex-row w-[353px] border-none justify-center items-center mt-[11.335px];
+}
+
+.intervalMinMax {
+  @apply w-[16px] h-[19px] font-peyda font-medium text-[12.665px]
+  leading-[19px] flex items-center justify-start text-[#FFFFFF] mt-[3.23px];
+}
+
+.intervalSlider {
+  @apply min-w-[86px] w-fit h-[44px] bg-[#933147] rounded-[7.00192px] relative p-2 flex justify-center items-center;
+  @apply before:content-['']
+  before:absolute
+  before:-bottom-1.5
+
+  before:border-solid
+  before:border-t-[8px]
+  before:border-x-[9px]
+  before:border-b-0
+  before:left-1/2
+  before:-translate-x-1/2
+
+  before:border-t-[#933147]
+  before:border-x-transparent;
+}
+
+.intervalSliderText {
+  @apply font-peyda font-normal text-[14px] leading-4 flex items-center text-center text-[#DBDBDB]
+}

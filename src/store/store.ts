@@ -6,6 +6,8 @@ import { createWrapper } from 'next-redux-wrapper';
 import phoneReducer from './phoneSlice';
 import otpReducer from './otpSlice';
 import userReducer from './usernameSlice';
+// eslint-disable-next-line import/no-cycle
+import ageReducer from './ageSlice';
 
 export const makeStore = () =>
   configureStore({
@@ -13,6 +15,7 @@ export const makeStore = () =>
       phone: phoneReducer,
       otp: otpReducer,
       username: userReducer,
+      age: ageReducer,
     },
   });
 

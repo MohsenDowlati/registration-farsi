@@ -45,4 +45,11 @@ export const Text = {
     'username-username': '@katatonia',
     'username-another': 'تغییر نام کاربری',
   },
+  age: {
+    'age-header': 'چند سالته؟',
+    'age-min': '7',
+    'age-max': '60',
+    'age-description': 'نگران نباش! فقط برای تنظیمات بهتر استفاده می‌شه، نه برای نمایش به دیگران.',
+    'age-initial-text': 'برای انتخاب بازه سنی،همین اهرم را بکشید',
+  },
 };

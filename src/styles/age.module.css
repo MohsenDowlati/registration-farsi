@@ -1,0 +1,8 @@
+.ageHeader {
+  @apply w-[353px] h-10 font-peyda font-bold text-[24px] leading-10
+  flex items-center justify-center text-[#FFFFFF] mt-[20px] mb-[56px];
+}
+
+.ageDescription {
+  @apply w-[353px] h-[48px] font-peyda font-normal text-[16px] leading-6 flex items-center justify-center text-[#FFFFFF] mt-[56px] text-center;
+}

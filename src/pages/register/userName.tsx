@@ -12,7 +12,7 @@ const UserName: React.FC = () => {
       <h1 className={style.userNameHeader}>{Text.Username['username-header']}</h1>
       <h3 className={style.userNameUsername}>{Text.Username['username-username']}</h3>
       <h5 className={style.userNameAgain}>{Text.Username['username-another']}</h5>
-      <AcceptButton link={RegisterNavigation.Name} isOK />
+      <AcceptButton link={RegisterNavigation.Age} isOK />
     </section>
   );
 };

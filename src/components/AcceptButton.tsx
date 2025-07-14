@@ -19,9 +19,13 @@ const AcceptButton: React.FC<AcceptButtonProps> = ({ link, isOK }) => {
     }
   };
   return (
-    <div className={`${app.nextBtn} ${isOK ? app.bgPrimary : app.bgError}`}>
-      <ArrowLeftSvg onClick={handleNavigation} className="" />
-    </div>
+    <button
+      className={`${app.nextBtn} ${isOK ? app.bgPrimary : app.bgError}`}
+      onClick={handleNavigation}
+      type="button"
+    >
+      <ArrowLeftSvg className="" />
+    </button>
   );
 };
 
