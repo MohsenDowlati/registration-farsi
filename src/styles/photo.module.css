@@ -1,0 +1,11 @@
+.photoContainer {
+  @apply w-[200px] h-[200px] bg-[#4C4C4C] rounded-full flex justify-center items-center;
+}
+
+.photo {
+
+}
+
+.photoHeader {
+  @apply h-10 font-peyda font-bold text-[24px] leading-10 items-center text-center text-white mt-[20px] mb-[56px];
+}

@@ -8,6 +8,7 @@ import AcceptButton from '@components/AcceptButton';
 import OTPField from '@components/registerCode/OTPField';
 import NameInput from '@components/name/NameInput';
 import Interval from '@components/Interval';
+import PhotoHolder from '@components/photo/PhotoHolder';
 import Meta from './Meta';
 
 export {
@@ -21,4 +22,5 @@ export {
   OTPField,
   NameInput,
   Interval,
+  PhotoHolder,
 };

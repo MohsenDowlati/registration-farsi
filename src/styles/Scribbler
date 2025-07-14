@@ -1,20 +1,22 @@
-/* 19 تا 24 سال */
+/* تصویر اضافه کن! */
 
-position: absolute;
-width: 67px;
-height: 24px;
-left: 101px;
-top: 107px;
+width: 343px;
+height: 40px;
 
 font-family: 'Peyda';
 font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-/* identical to box height, or 171% */
+font-weight: 700;
+font-size: 24px;
+line-height: 40px;
+/* identical to box height, or 167% */
 display: flex;
 align-items: center;
 text-align: center;
 
-color: #DBDBDB;
+color: #FFFFFF;
 
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;

@@ -6,6 +6,7 @@ const registerNavigation = {
   Username: '/register/userName',
   Age: '/register/age',
   Photo: '/register/photo',
+  UserType: '/register/userType',
 };
 
 export default registerNavigation;

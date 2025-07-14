@@ -1,7 +1,16 @@
-.navContainer {
+.navContainerOrdinary {
   @apply flex flex-row items-center w-[390px] h-[56px] justify-end;
+}
+
+.navContainerSkip {
+  @apply flex flex-row items-center w-[390px] h-[56px] justify-between px-2;
 }
 
 .navBack {
   @apply flex items-center w-[20px] h-[19px] justify-center rounded-[58px] order-2 mr-[23px];
+}
+
+.navSkip {
+  @apply h-[24px] font-peyda font-semibold text-[16px]
+  leading-[24px] flex items-center text-center text-[#7D7D7D];
 }
