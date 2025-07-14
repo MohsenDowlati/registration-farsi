@@ -1,19 +1,19 @@
-/* نقش شما در دانامیت چیه؟ */
+/* 🔬علوم تجربی و زیست */
 
-width: 343px;
-height: 40px;
+width: 146px;
+height: 26px;
 
 font-family: 'Peyda';
 font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 40px;
-/* identical to box height, or 167% */
+font-weight: 400;
+font-size: 17.2232px;
+line-height: 26px;
+/* identical to box height, or 150% */
 display: flex;
 align-items: center;
 text-align: center;
 
-color: #FFFFFF;
+color: #F5F5F5;
 
 
 /* Inside auto layout */

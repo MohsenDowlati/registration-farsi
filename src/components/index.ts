@@ -10,6 +10,7 @@ import NameInput from '@components/name/NameInput';
 import Interval from '@components/Interval';
 import PhotoHolder from '@components/photo/PhotoHolder';
 import TypeCard from '@components/userType/TypeCard';
+import TopicCard from '@components/userType/TopicCard';
 import Meta from './Meta';
 
 export {
@@ -25,4 +26,5 @@ export {
   Interval,
   PhotoHolder,
   TypeCard,
+  TopicCard,
 };

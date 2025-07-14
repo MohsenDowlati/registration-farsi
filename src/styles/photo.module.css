@@ -3,7 +3,7 @@
 }
 
 .photo {
-
+ @apply object-cover;
 }
 
 .photoHeader {

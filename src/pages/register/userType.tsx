@@ -6,6 +6,7 @@ import RegisterNavigation from '@common/navigation';
 
 // eslint-disable-next-line react/function-component-definition
 const UserType: React.FC = () => {
+  // TODO: user type
   const colors = {
     green: 'bg-[#0EB55B]',
     red: 'bg-[#E60C31]',

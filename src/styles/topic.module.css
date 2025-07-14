@@ -1,0 +1,15 @@
+.topicCard {
+  @apply flex flex-row justify-center items-start p-[8.61162px] gap-[8.61px] w-[171px] h-[43.22px] rounded-[12.9174px] m-[4.3px];
+}
+
+.topicCardSelected {
+
+}
+
+.topicCardUnselected {
+  @apply bg-[#2B2B2B]
+}
+
+.topicCardText {
+  @apply h-[26px] font-peyda font-normal text-[17.2232px] leading-[26px] flex items-center text-center text-[#F5F5F5];
+}

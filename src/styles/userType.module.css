@@ -12,5 +12,5 @@
 }
 
 .typeCardsContainer {
-  @apply flex flex-wrap w-[359px] flex-row
+  @apply flex flex-wrap w-[359px] flex-row;
 }
