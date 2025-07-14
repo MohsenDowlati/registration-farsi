@@ -55,4 +55,11 @@ export const Text = {
   photo: {
     'photo-header': 'تصویر اضافه کن!',
   },
+  userType: {
+    'type-header': 'نقش شما در دانامیت چیه؟',
+    'type-type1': 'تفریحی / سرگرمی',
+    'type-type2': 'سازمان / کسب‌وکار',
+    'type-type3': 'معلم / استاد',
+    'type-type4': 'دانش‌آموز / دانشجو',
+  },
 };

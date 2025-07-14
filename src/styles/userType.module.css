@@ -1,0 +1,16 @@
+.typeCard {
+  @apply w-[172.91px] h-[110px] rounded-[11px] m-[3px] flex items-center justify-center;
+}
+
+.typeCardText {
+  @apply h-[22px] font-peyda font-medium text-[14.2734px] leading-[21px]
+  flex items-center justify-center text-center text-[#F5F5F5];
+}
+
+.typeHeader {
+  @apply w-[343px] h-[40px] font-peyda font-bold text-[24px] leading-10 flex items-center justify-center text-white text-center mt-[20px] mb-[56px];
+}
+
+.typeCardsContainer {
+  @apply flex flex-wrap w-[359px] flex-row
+}

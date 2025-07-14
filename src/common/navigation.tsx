@@ -7,6 +7,7 @@ const registerNavigation = {
   Age: '/register/age',
   Photo: '/register/photo',
   UserType: '/register/userType',
+  Topics: '/register/topics',
 };
 
 export default registerNavigation;
