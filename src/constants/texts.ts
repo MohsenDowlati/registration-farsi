@@ -94,4 +94,14 @@ export const Text = {
 ایمیلت رو وارد کن`,
     'email-input': 'Email',
   },
+  password: {
+    'password-header': 'انتخاب گذرواژه',
+    'password-description': 'یه رمز قوی بزن که فقط خودت بدونی!',
+    'password-input': 'گذرواژه',
+    'password-input-confirmation': 'تکرار گذرواژه',
+    'password-warn1': 'حداقل ۸ کاراکتر',
+    'password-warn2': 'شامل عدد و حرف',
+    'password-warn3': 'استفاده از یک علامت خاص',
+    'password-warn4': 'بدون فاصله',
+  },
 };

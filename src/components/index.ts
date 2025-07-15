@@ -11,6 +11,7 @@ import PhotoHolder from '@components/photo/PhotoHolder';
 import TypeCard from '@components/userType/TypeCard';
 import TopicCard from '@components/userType/TopicCard';
 import EmailField from '@components/email/EmailField';
+import PasswordField from '@components/passwordField';
 import Meta from './Meta';
 
 export {
@@ -28,4 +29,5 @@ export {
   TypeCard,
   TopicCard,
   EmailField,
+  PasswordField,
 };

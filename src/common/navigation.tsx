@@ -9,6 +9,7 @@ const registerNavigation = {
   UserType: '/register/userType',
   Topics: '/register/topics',
   Email: '/register/email',
+  Password: '/register/password',
 };
 
 export default registerNavigation;

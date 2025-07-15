@@ -13,6 +13,11 @@ import WikipediaSvg from '@svg/WikipediaSvg';
 import SocialSvg from '@svg/SocialSvg';
 import ArrowLeftSvg from '@svg/ArrowLeftSvg';
 import ArrowRightSvg from '@svg/ArrowRightSvg';
+import ConfirmSvg from '@svg/ConfirmSvg';
+import ErrorSvg from '@svg/ErrorSvg';
+import HideSvg from '@svg/HideSvg';
+import UnhideSvg from '@svg/UnhideSvg';
+import WarningSvg from '@svg/WarningSvg';
 
 /* Exporting the svg files from the svg folder. */
 export {
@@ -30,4 +35,9 @@ export {
   SocialSvg,
   ArrowLeftSvg,
   ArrowRightSvg,
+  ConfirmSvg,
+  ErrorSvg,
+  HideSvg,
+  UnhideSvg,
+  WarningSvg,
 };

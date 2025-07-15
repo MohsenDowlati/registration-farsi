@@ -21,7 +21,7 @@ const NameInput: React.FC<NameInputProps> = ({ text, isValid = true, onChange })
         placeholder={text}
         type="text"
         inputMode="text"
-        className={styles.nameInput}
+        className={`ms-4 ${styles.nameInput}`}
         onChange={handleInput}
       />
     </div>
