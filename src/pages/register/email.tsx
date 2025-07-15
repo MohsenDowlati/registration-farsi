@@ -14,7 +14,11 @@ const Email: React.FC = () => {
 
   return (
     <section>
-      <RegNav link={RegisterNavigation.Topics} skip linkSkip={RegisterNavigation.Password} />
+      <RegNav
+        link={RegisterNavigation.register.Topics}
+        skip
+        linkSkip={RegisterNavigation.register.Password}
+      />
       <h1 className={style.topicHeader}>{Text.email['email-header']}</h1>
       <h3 className={style.topicDescription} style={{ whiteSpace: 'pre-line' }} dir="rtl">
         {Text.email['email-description']}
@@ -24,7 +28,7 @@ const Email: React.FC = () => {
         onChange={(val) => dispatch(setEmail(val))}
         isValid={isOK}
       />
-      <AcceptButton link={RegisterNavigation.Password} isOK={isOK} />
+      <AcceptButton link={RegisterNavigation.register.Password} isOK={isOK} />
     </section>
   );
 };

@@ -37,7 +37,7 @@ const Name: React.FC = () => {
 
   return (
     <section>
-      <RegNav link={registerNavigation.Phone} />
+      <RegNav link={registerNavigation.register.Phone} />
       <h1 className={style.nameHeader}>{Texts.Name['name-header']}</h1>
       <div className="relative w-full mt-[50px]">
         <div className={style.inputsContainer}>
@@ -93,7 +93,7 @@ const Name: React.FC = () => {
         )}
       </div>
 
-      <AcceptButton link={registerNavigation.Username} isOK={isValid} />
+      <AcceptButton link={registerNavigation.register.Username} isOK={isValid} />
     </section>
   );
 };

@@ -18,7 +18,7 @@ const Age: React.FC = () => {
   };
   return (
     <section>
-      <RegNav link={RegisterNavigation.Username} />
+      <RegNav link={RegisterNavigation.register.Username} />
       <h1 dir="rtl" className={style.ageHeader}>
         {Text.age['age-header']}
       </h1>
@@ -32,7 +32,7 @@ const Age: React.FC = () => {
       <h2 dir="rtl" className={style.ageDescription}>
         {Text.age['age-description']}
       </h2>
-      <AcceptButton link={RegisterNavigation.Photo} isOK={isOK} />
+      <AcceptButton link={RegisterNavigation.register.Photo} isOK={isOK} />
     </section>
   );
 };

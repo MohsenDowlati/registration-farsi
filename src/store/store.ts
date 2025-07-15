@@ -11,6 +11,7 @@ import ageReducer from './ageSlice';
 import topicReducer from './topicSlice';
 // eslint-disable-next-line import/no-named-as-default
 import emailReducer from './emailSlice';
+import passwordReducer from './passwordSlice';
 
 export const makeStore = () =>
   configureStore({
@@ -21,6 +22,7 @@ export const makeStore = () =>
       age: ageReducer,
       topic: topicReducer,
       email: emailReducer,
+      password: passwordReducer,
     },
   });
 

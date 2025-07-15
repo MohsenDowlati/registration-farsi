@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
 import app from '@styles/app.module.css';
-import styles from '@styles/name.module.css';
+import styles from '@styles/password.module.css';
 import { HideSvg, UnhideSvg } from '@/svg';
 
-interface NameInputProps {
+interface PasswordInputProps {
   text: string;
   // eslint-disable-next-line react/require-default-props
   isValid: boolean;
   // eslint-disable-next-line react/require-default-props
   isVisible?: boolean;
   onChange: (value: string) => void;
+  handleVisibility: () => void;
 }
 
 // eslint-disable-next-line react/function-component-definition
-const NameInput: React.FC<NameInputProps> = ({ text, isValid, onChange, isVisible = false }) => {
+const PasswordField: React.FC<PasswordInputProps> = ({
+  text,
+  isValid,
+  onChange,
+  isVisible = false,
+  handleVisibility,
+}) => {
   const [isSelected, setIsSelected] = useState(false);
 
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
@@ -21,22 +28,24 @@ const NameInput: React.FC<NameInputProps> = ({ text, isValid, onChange, isVisibl
   }
 
   return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
-    <div
-      dir={isSelected ? 'rtl' : 'ltr'}
-      className={`${app.textField} ${isValid ? app.textFieldOK : app.textFieldError}`}
-      onClick={() => setIsSelected(true)}
-    >
+    <div className={`${app.textField} ${isValid ? app.textFieldOK : app.textFieldError} my-[10px]`}>
       <input
-        placeholder={text}
+        placeholder={isSelected ? '' : text}
+        dir={isSelected ? 'ltr' : 'rtl'}
         type={isVisible ? 'text' : 'password'}
         inputMode="text"
-        className={`ms-4 ${styles.nameInput}`}
+        className={`${isSelected ? 'ml-4' : 'mr-4'} ${styles.passwordInput}`}
         onChange={handleInput}
+        onClick={() => setIsSelected(true)}
       />
-      {isSelected && isVisible ? <HideSvg /> : <UnhideSvg />}
+      {/* eslint-disable-next-line no-nested-ternary */}
+      {!isSelected ? null : isVisible ? (
+        <HideSvg onClick={handleVisibility} className="mr-[10px]" />
+      ) : (
+        <UnhideSvg onClick={handleVisibility} className="mr-[10px]" />
+      )}
     </div>
   );
 };
 
-export default NameInput;
+export default PasswordField;

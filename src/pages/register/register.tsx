@@ -5,12 +5,13 @@ import style from '@styles/register.module.css';
 import { Button, Header } from '@components/index';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import RegisterNavigation from '@common/navigation';
 
 // eslint-disable-next-line react/function-component-definition
 const Register: React.FC = () => {
   const router = useRouter();
   const signUp = () => {
-    router.push('/register/phone');
+    router.push(RegisterNavigation.register.Phone);
   };
 
   const signIn = () => {

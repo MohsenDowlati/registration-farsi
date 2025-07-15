@@ -16,7 +16,7 @@ const UserType: React.FC = () => {
 
   return (
     <section>
-      <RegNav link={RegisterNavigation.Photo} />
+      <RegNav link={RegisterNavigation.register.Photo} />
       <h1 className={style.typeHeader} dir="rtl">
         {text.userType['type-header']}
       </h1>
@@ -26,7 +26,7 @@ const UserType: React.FC = () => {
         <TypeCard text={text.userType['type-type3']} color={colors.pumpkin} />
         <TypeCard text={text.userType['type-type3']} color={colors.blue} />
       </div>
-      <AcceptButton link={RegisterNavigation.Topics} isOK />
+      <AcceptButton link={RegisterNavigation.register.Topics} isOK />
     </section>
   );
 };

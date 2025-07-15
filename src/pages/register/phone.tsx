@@ -16,7 +16,7 @@ const Phone: React.FC = () => {
 
   return (
     <section>
-      <RegNav link={registerNavigation.Home} />
+      <RegNav link={registerNavigation.register.Home} />
       <h1 className={style.headerPhone} dir="rtl">
         {Text.phone['register-phone-header']}
       </h1>
@@ -27,7 +27,7 @@ const Phone: React.FC = () => {
         </p>
       </div>
       <GoogleLogin />
-      <AcceptButton link={registerNavigation.EntryCode} isOK={isOK} />
+      <AcceptButton link={registerNavigation.register.EntryCode} isOK={isOK} />
     </section>
   );
 };

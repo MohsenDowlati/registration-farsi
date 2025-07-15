@@ -140,5 +140,6 @@ declare namespace cat {
 
   interface Svg {
     className?: string;
+    onClick?: () => void;
   }
 }

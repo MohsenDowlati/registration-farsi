@@ -1,5 +1,5 @@
 .nameInput {
-  @apply font-peyda font-normal text-base leading-6 flex items-center bg-[#232323] order-1 focus:outline-none focus:ring-0;
+  @apply font-peyda font-normal text-base leading-6 flex items-center bg-[#232323] order-1 focus:outline-none focus:ring-0 mr-4;
 }
 
 .nameHeader {

@@ -8,11 +8,11 @@ import RegisterNavigation from '@/common/navigation';
 const UserName: React.FC = () => {
   return (
     <section>
-      <RegNav link={RegisterNavigation.Name} />
+      <RegNav link={RegisterNavigation.register.Name} />
       <h1 className={style.userNameHeader}>{Text.Username['username-header']}</h1>
       <h3 className={style.userNameUsername}>{Text.Username['username-username']}</h3>
       <h5 className={style.userNameAgain}>{Text.Username['username-another']}</h5>
-      <AcceptButton link={RegisterNavigation.Age} isOK />
+      <AcceptButton link={RegisterNavigation.register.Age} isOK />
     </section>
   );
 };

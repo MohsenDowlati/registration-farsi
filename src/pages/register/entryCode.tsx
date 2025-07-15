@@ -14,7 +14,7 @@ const EntryCode: React.FC = () => {
 
   return (
     <section>
-      <RegNav link={registerNavigation.Phone} />
+      <RegNav link={registerNavigation.register.Phone} />
       <h1 className={style.otpHeader} dir="rtl">
         {Texts.codeOTP['code-header']}{' '}
       </h1>
@@ -23,7 +23,7 @@ const EntryCode: React.FC = () => {
         <p className={style.otpText}>{Texts.codeOTP['code-sub']}</p>
         <p className={style.otpLink}>{Texts.codeOTP['code-sub-link']}</p>
       </div>
-      <AcceptButton link={registerNavigation.Name} isOK={isOkay} />
+      <AcceptButton link={registerNavigation.register.Name} isOK={isOkay} />
     </section>
   );
 };

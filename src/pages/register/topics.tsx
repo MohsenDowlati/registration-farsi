@@ -37,7 +37,7 @@ const Topics: React.FC = () => {
 
   return (
     <section>
-      <RegNav link={RegisterNavigation.UserType} />
+      <RegNav link={RegisterNavigation.register.UserType} />
       <h1 className={style.topicHeader} dir="rtl">
         {Text.topics['topics-header']}
       </h1>
@@ -58,7 +58,7 @@ const Topics: React.FC = () => {
           />
         ))}
       </div>
-      <AcceptButton link={RegisterNavigation.Email} isOK />
+      <AcceptButton link={RegisterNavigation.register.Email} isOK />
     </section>
   );
 };
