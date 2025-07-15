@@ -1,14 +1,14 @@
-/* 🔬علوم تجربی و زیست */
+/* موضوع‌هایی رو انتخاب کن که بیشتر دوست داری؛ تا بازی‌ها و آزمون‌های جالب‌تری برات آماده کنیم! */
 
-width: 146px;
-height: 26px;
+width: 353px;
+height: 48px;
 
 font-family: 'Peyda';
 font-style: normal;
 font-weight: 400;
-font-size: 17.2232px;
-line-height: 26px;
-/* identical to box height, or 150% */
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
 display: flex;
 align-items: center;
 text-align: center;
@@ -19,4 +19,5 @@ color: #F5F5F5;
 /* Inside auto layout */
 flex: none;
 order: 0;
+align-self: stretch;
 flex-grow: 0;

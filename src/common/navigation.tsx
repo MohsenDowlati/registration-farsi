@@ -8,6 +8,7 @@ const registerNavigation = {
   Photo: '/register/photo',
   UserType: '/register/userType',
   Topics: '/register/topics',
+  Email: '/register/email',
 };
 
 export default registerNavigation;

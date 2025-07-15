@@ -1,15 +1,27 @@
 .topicCard {
-  @apply flex flex-row justify-center items-start p-[8.61162px] gap-[8.61px] w-[171px] h-[43.22px] rounded-[12.9174px] m-[4.3px];
+  @apply flex flex-row justify-center items-start p-[8.61162px] w-[171px] h-[43.22px] rounded-[12.9174px] m-[4.3px];
 }
 
 .topicCardSelected {
-
+  @apply bg-[#933147]
 }
 
 .topicCardUnselected {
-  @apply bg-[#2B2B2B]
+  @apply bg-[#2B2B2B];
 }
 
 .topicCardText {
-  @apply h-[26px] font-peyda font-normal text-[17.2232px] leading-[26px] flex items-center text-center text-[#F5F5F5];
+  @apply h-[26px] font-peyda font-normal text-[17.2232px] leading-[26px] flex items-center text-center text-[#F5F5F5] tracking-tight;
+}
+
+.topicHeader {
+  @apply font-peyda font-bold text-[24px] leading-[40px] flex items-center text-center justify-center text-[#F5F5F5] w-[353px];
+}
+
+.topicDescription {
+  @apply font-peyda font-normal text-[16px] leading-[24px] flex text-[#f5f5f5] text-center justify-center items-center my-[22px] w-[357px];
+}
+
+.topicCardsContainer {
+  @apply flex flex-row justify-center items-center flex-wrap h-[509px];
 }

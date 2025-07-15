@@ -22,7 +22,9 @@ const TopicCard: React.FC<TopicCardProps> = ({ title, key, onSelect, isSelected 
         isSelected ? Style.topicCardSelected : Style.topicCardUnselected
       }`}
     >
-      <p className={Style.topicCardText}>{title}</p>
+      <p className={Style.topicCardText} dir="rtl">
+        {title}
+      </p>
     </div>
   );
 };

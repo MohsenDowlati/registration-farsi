@@ -8,6 +8,7 @@ import otpReducer from './otpSlice';
 import userReducer from './usernameSlice';
 // eslint-disable-next-line import/no-cycle
 import ageReducer from './ageSlice';
+import topicReducer from './topicSlice';
 
 export const makeStore = () =>
   configureStore({
@@ -16,6 +17,7 @@ export const makeStore = () =>
       otp: otpReducer,
       username: userReducer,
       age: ageReducer,
+      topic: topicReducer,
     },
   });
 

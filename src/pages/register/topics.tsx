@@ -2,48 +2,63 @@ import React from 'react';
 import { AcceptButton, RegNav, TopicCard } from '@/components';
 import RegisterNavigation from '@common/navigation';
 import Text from '@/constants';
+import style from '@styles/topic.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTopic, selectTopicSelection } from '@/store/topicSlice';
+
+const topics = [
+  { id: 0, topic: 'math and physics' },
+  { id: 1, topic: 'science and biology' },
+  { id: 2, topic: 'history' },
+  { id: 3, topic: 'literature' },
+  { id: 4, topic: 'english language' },
+  { id: 5, topic: 'intelligence and puzzles' },
+  { id: 6, topic: 'comics and anime' },
+  { id: 7, topic: 'computer and technology' },
+  { id: 8, topic: 'art and painting' },
+  { id: 9, topic: 'animal world' },
+  { id: 10, topic: 'cinema and series' },
+  { id: 11, topic: 'astronomy and space' },
+  { id: 12, topic: 'sports' },
+  { id: 13, topic: 'geography' },
+  { id: 14, topic: 'computer games' },
+  { id: 15, topic: 'economics' },
+  { id: 16, topic: 'psychology and mind' },
+  { id: 17, topic: 'music' },
+  { id: 18, topic: 'characters' },
+  { id: 19, topic: 'cultures and countries' },
+];
 
 // eslint-disable-next-line react/function-component-definition
 const Topics: React.FC = () => {
-  const topics = [
-    { id: 1, topic: 'math and physics' },
-    { id: 2, topic: 'science and biology' },
-    { id: 3, topic: 'history' },
-    { id: 4, topic: 'literature' },
-    { id: 5, topic: 'english language' },
-    { id: 6, topic: 'intelligence and puzzles' },
-    { id: 7, topic: 'comics and anime' },
-    { id: 8, topic: 'computer and technology' },
-    { id: 9, topic: 'art and painting' },
-    { id: 10, topic: 'animal world' },
-    { id: 11, topic: 'cinema and series' },
-    { id: 12, topic: 'astronomy and space' },
-    { id: 13, topic: 'sports' },
-    { id: 14, topic: 'geography' },
-    { id: 15, topic: 'computer games' },
-    { id: 16, topic: 'economics' },
-    { id: 17, topic: 'psychology and mind' },
-    { id: 18, topic: 'music' },
-    { id: 19, topic: 'characters' },
-    { id: 20, topic: 'cultures and countries' },
-  ];
+  const dispatch = useDispatch();
+  const isSelected = useSelector(selectTopicSelection);
+  // const s = useSelector(selectSelectedTopicIndices);
 
   return (
     <section>
       <RegNav link={RegisterNavigation.UserType} />
-      <h1>{Text.topics['topics-header']}</h1>
-      <h3>{Text.topics['topics-description']}</h3>
-      {topics.map((topic) => (
-        <TopicCard
-          key={`${topic.id}-topic`}
-          title={
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            Text.topics[`topics-id${topic.id.toString()}`]
-          }
-        />
-      ))}
-      <AcceptButton link="" isOK />
+      <h1 className={style.topicHeader} dir="rtl">
+        {Text.topics['topics-header']}
+      </h1>
+      <h3 className={style.topicDescription} dir="rtl">
+        {Text.topics['topics-description']}
+      </h3>
+      <div className={style.topicCardsContainer}>
+        {topics.map((topic) => (
+          <TopicCard
+            key={`${topic.id}-topic`}
+            title={
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              Text.topics[`topics-id${(topic.id + 1).toString()}`]
+            }
+            isSelected={isSelected[topic.id]}
+            onSelect={() => dispatch(toggleTopic(topic.id))}
+          />
+        ))}
+      </div>
+      <AcceptButton link={RegisterNavigation.Email} isOK />
     </section>
   );
 };
