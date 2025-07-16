@@ -34,7 +34,8 @@ export const Text = {
     'name-header': 'اسمت چیه؟',
     'name-input-first-name': 'نام',
     'name-input-last-name': 'نام خانوادگی',
-    'name-input-user-name': 'اسم نمایشی',
+    'name-input-nick-name': 'نام نمایشی در پروفایل',
+    'name-input-user-name': 'Username',
     'name-user-name-header': 'خیلیا یه اسم خفن  هم واسه خودشون می‌سازن!',
     'name-warning1': 'نباید فاصله داشته باشه',
     'name-warning2': 'حداقل ۳ حرف باشه',
@@ -103,5 +104,25 @@ export const Text = {
     'password-warn2': 'شامل عدد و حرف',
     'password-warn3': 'استفاده از یک علامت خاص',
     'password-warn4': 'بدون فاصله',
+  },
+  boarding: {
+    'boarding-header': [
+      'آزمون بساز،\nچالش درست کن!',
+      'بازی کن،\nیاد بگیر!',
+      'امتیاز بگیر،\nبرتر شو!',
+    ],
+    'boarding-description': [
+      'خودت می‌تونی آزمون بسازی تا دوستات، کلاس یا حتی بقیه توش شرکت کنن. موضوعش هم دست خودته!',
+      'می‌تونی تو بخش دیسکاور دنبال آزمونا بگردی، یا با یه پین‌کد ساده، توی چالشِ بقیه شرکت کنی!',
+      'تو هر موضوعی که دوست داری، بازی کن و امتیاز بگیر!\n رتبه‌ت توی جدول رقابت بالا ببر و بدرخش!',
+    ],
+    'boarding-next': 'بعدی',
+    'boarding-done': 'بزن بریم!',
+  },
+  login: {
+    'login-header': 'خوش اومدی!',
+    'login-password': 'گذرواژه',
+    'login-otp': 'ورود با کد یکبار مصرف',
+    'login-forget-password': 'فراموشی رمز',
   },
 };

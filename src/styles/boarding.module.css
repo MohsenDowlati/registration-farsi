@@ -1,0 +1,25 @@
+.boardingImageSliderLayer {
+  @apply w-[352px] bg-[#2B2B2B] overflow-hidden relative;
+}
+
+.boardingImageSliderUnselectedButton {
+  @apply w-[37px] h-2 bg-[#DBDBDB] rounded-[19px] transform -scale-x-100 mx-[3px];
+}
+
+.boardingImageSliderSelectedButton {
+  @apply w-4 h-2 bg-[#F9C74F] rounded-[19px] transform -scale-x-100 mx-[3px];
+}
+
+.boardingImageSlider {
+  @apply flex items-center justify-center w-full flex-col;
+}
+
+.boardingHeader {
+  @apply whitespace-pre-line h-[82px] w-[338px] font-peyda font-bold text-[34px] leading-[41px]
+  text-center flex items-center justify-center text-white mt-[22px] mb-2;
+}
+
+.boardingDescription {
+  @apply whitespace-pre-line w-[338px] h-[40px] text-[14px] leading-[20px] font-peyda font-normal
+  text-center text-[#CACACA] flex items-center justify-center mb-[27px];
+}

@@ -1,0 +1,11 @@
+.loginHeader {
+  @apply font-peyda font-bold text-[24px] leading-[40px] flex items-center justify-center text-center text-white my-4;
+}
+
+.loginSubButtonContainer {
+  @apply w-[343px] flex flex-row justify-between items-center my-4;
+}
+
+.loginSubButton {
+  @apply h-[15px] font-peyda font-semibold text-[13px] leading-[15px] flex items-center justify-center text-[#F9C74F];
+}

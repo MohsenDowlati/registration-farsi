@@ -1,7 +1,7 @@
 .container {
   position: relative;
   width: 100%;
-  padding: 40px 0; /* space for tooltip */
+  padding: 40px 0;
 }
 
 .slider {

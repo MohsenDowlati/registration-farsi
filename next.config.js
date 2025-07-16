@@ -11,6 +11,9 @@ const withPWA = require('next-pwa')({
 
 const nextConfig = withPWA({
   reactStrictMode: false, // 👈 DISABLING THIS TO AVOID DOUBLE RENDER
+  images: {
+    domains: ['cdn2.thecatapi.com'], // ← add your external hostname here
+  },
 });
 
 module.exports = nextConfig;

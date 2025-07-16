@@ -11,7 +11,12 @@ interface btnProps {
 // eslint-disable-next-line react/function-component-definition
 const Button: React.FC<btnProps> = ({ text, onClick, backgroundColor = app.bgPrimary }) => {
   return (
-    <button className={`${styles.btn_main} ${backgroundColor}`} onClick={onClick} type="button">
+    <button
+      className={`${styles.btn_main} ${backgroundColor}`}
+      onClick={onClick}
+      type="button"
+      dir="rtl"
+    >
       {text}
     </button>
   );

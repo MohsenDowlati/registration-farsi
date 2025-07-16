@@ -15,6 +15,9 @@ const registerNavigation = {
   boarding: {
     Boarding: '/boarding/boarding',
   },
+  login: {
+    Login: '/login/login',
+  },
 };
 
 export default registerNavigation;

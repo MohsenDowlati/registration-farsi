@@ -3,13 +3,11 @@
 }
 
 .nameHeader {
-  @apply w-[343px] h-[40px] font-peyda font-bold text-[24px] leading-10 flex justify-center items-center text-center text-[#FFFFFF] mb-[56px];
+  @apply w-[343px] h-[40px] font-peyda font-bold text-[24px] leading-10 flex justify-center items-center text-center text-[#FFFFFF] mb-[56px] mt-[20px];
 }
 
 .inputsContainer {
-  @apply w-[343px] h-[240px] flex items-center flex-col justify-between absolute left-1/2 top-1/2
-  transform -translate-x-1/2 -translate-y-1/2
-  z-10;
+  @apply w-[343px] h-[240px] flex items-center flex-col justify-between ;
 }
 
 .nameUserHeader {
@@ -18,7 +16,7 @@
 
 .warningContainer {
   @apply box-border w-[343px] h-[128px] bg-[#232323] rounded-b-[16px] border border-solid z-0
-  transform translate-y-[172px] translate-x-[23.76px];
+  transform -translate-y-[70px] translate-x-[0px];
 }
 
 .warningContainerOK {

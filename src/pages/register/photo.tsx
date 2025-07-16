@@ -8,7 +8,11 @@ import style from '@styles/photo.module.css';
 const Photo: React.FC = () => {
   return (
     <section>
-      <RegNav link={RegisterNavigation.register.Age} skip linkSkip={RegisterNavigation.register.UserType} />
+      <RegNav
+        link={RegisterNavigation.register.Age}
+        skip
+        linkSkip={RegisterNavigation.register.UserType}
+      />
       <h1 className={style.photoHeader} dir="rtl">
         {Text.photo['photo-header']}
       </h1>

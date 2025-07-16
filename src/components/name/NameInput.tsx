@@ -7,21 +7,26 @@ interface NameInputProps {
   // eslint-disable-next-line react/require-default-props
   isValid?: boolean;
   onChange: (value: string) => void;
+  // eslint-disable-next-line react/require-default-props
+  ltr?: boolean;
 }
 
 // eslint-disable-next-line react/function-component-definition
-const NameInput: React.FC<NameInputProps> = ({ text, isValid = true, onChange }) => {
+const NameInput: React.FC<NameInputProps> = ({ text, isValid = true, onChange, ltr = false }) => {
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
     onChange(e.target.value);
   }
 
   return (
-    <div dir="rtl" className={`${app.textField} ${isValid ? app.textFieldOK : app.textFieldError}`}>
+    <div
+      dir={ltr ? 'ltr' : 'rtl'}
+      className={`${app.textField} ${isValid ? app.textFieldOK : app.textFieldError}`}
+    >
       <input
         placeholder={text}
         type="text"
         inputMode="text"
-        className={`ms-4 ${styles.nameInput}`}
+        className={`${!ltr ? 'mr-4' : 'ml-4'} ${styles.nameInput}`}
         onChange={handleInput}
       />
     </div>

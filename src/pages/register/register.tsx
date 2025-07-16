@@ -16,7 +16,7 @@ const Register: React.FC = () => {
 
   const signIn = () => {
     // eslint-disable-next-line no-console
-    console.log('SignIn');
+    router.push(RegisterNavigation.login.Login);
   };
 
   return (

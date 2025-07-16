@@ -1,22 +1,20 @@
-/* حداقل ۸ کاراکتر */
+/* ورود با کد یکبار مصرف */
 
-width: 69px;
-height: 16px;
+position: absolute;
+width: 119px;
+height: 15px;
+left: calc(50% - 119px/2 + 112.5px);
+top: 194px;
 
 font-family: 'Peyda';
 font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height, or 133% */
+font-weight: 600;
+font-size: 13px;
+line-height: 15px;
+/* identical to box height, or 115% */
 display: flex;
 align-items: center;
 text-align: right;
 
-color: #FFFFFF;
+color: #F9C74F;
 
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
