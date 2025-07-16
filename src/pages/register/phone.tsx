@@ -1,16 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AcceptButton, GoogleLogin, PhoneField, RegNav } from '@/components';
 import Text from '@/constants';
 import style from '@/styles/phone.module.css';
 import registerNavigation from '@/common/navigation';
+import toaster from '@common/toastType';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPhoneOK, selectPhoneValue, setPhone } from '@/store/phoneSlice';
+import Toast from '@components/Toast';
 
 // eslint-disable-next-line react/function-component-definition
 const Phone: React.FC = () => {
   const dispatch = useDispatch();
   const phone = useSelector(selectPhoneValue);
   const isOK = useSelector(selectPhoneOK);
+
+  const [needToast, setNeedToast] = useState(false);
 
   useEffect(() => {}, [phone, isOK]);
 
@@ -28,6 +32,7 @@ const Phone: React.FC = () => {
       </div>
       <GoogleLogin />
       <AcceptButton link={registerNavigation.register.EntryCode} isOK={isOK} />
+      <Toast message="" setToast={setNeedToast} toast={needToast} type={toaster.info} />
     </section>
   );
 };
