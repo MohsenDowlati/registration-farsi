@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Text from '@/constants';
 import style from '@/styles/phoneField.module.css';
 import app from '@/styles/app.module.css';
@@ -10,20 +10,25 @@ interface PhoneFieldProps {
 
 // eslint-disable-next-line react/function-component-definition
 const PhoneField: React.FC<PhoneFieldProps> = ({ onChange, isOK }) => {
+  const [isSelected, setSelected] = useState(false);
+
   function handlePhone(e: React.ChangeEvent<HTMLInputElement>) {
-    // eslint-disable-next-line no-console
     onChange(e.target.value);
   }
 
   // maybe add isSelected method later
   return (
-    <div className={`${app.textField} ${isOK ? app.textFieldOK : app.textFieldError}`}>
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
+    <div
+      className={`${app.textField} ${isOK || !isSelected ? app.textFieldOK : app.textFieldError}`}
+      onClick={() => setSelected(true)}
+    >
       <div className={`${style.preNumber} ${app.bgSecondary}`}>
         {Text.phone['register-phone-default-pre-number']}
       </div>
       <input
         className={`${style.phoneFieldContainer} ${
-          isOK ? style.placeHolderOK : style.placeHolderError
+          isOK || !isSelected ? style.placeHolderOK : style.placeHolderError
         }`}
         type="tel"
         pattern="[0-9]*"

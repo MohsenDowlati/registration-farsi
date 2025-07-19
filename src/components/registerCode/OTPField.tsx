@@ -16,6 +16,8 @@ const OTPField: React.FC<OTPFieldProps> = ({ length = 6, isOkay, onComplete }) =
   const [values, setValues] = useState<string[]>(Array(length).fill(''));
   const inputsRef = useRef<Array<HTMLInputElement | null>>([]);
 
+  const [isSelected, setIsSelected] = useState<boolean>(false);
+
   useEffect(() => {
     inputsRef.current[0]?.focus();
   }, []);
@@ -51,7 +53,7 @@ const OTPField: React.FC<OTPFieldProps> = ({ length = 6, isOkay, onComplete }) =
     <div
       className={`flex items-center justify-center
         ${app.textField}
-        ${isOkay ? app.textFieldOK : app.textFieldError}
+        ${isOkay || !isSelected ? app.textFieldOK : app.textFieldError}
       `}
     >
       {values.map((val, i) => (
@@ -65,6 +67,7 @@ const OTPField: React.FC<OTPFieldProps> = ({ length = 6, isOkay, onComplete }) =
           onKeyDown={(e) => handleKeyDown(e, i)}
           ref={(el) => handleRef(el, i)}
           placeholder="●"
+          onClick={() => setIsSelected(true)}
         />
       ))}
     </div>
