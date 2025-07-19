@@ -104,6 +104,7 @@ export const Text = {
     'password-warn2': 'شامل عدد و حرف',
     'password-warn3': 'استفاده از یک علامت خاص',
     'password-warn4': 'بدون فاصله',
+    'password-header-again': 'انتخاب گذرواژه جدید',
   },
   boarding: {
     'boarding-header': [

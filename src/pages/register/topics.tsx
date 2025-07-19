@@ -4,7 +4,7 @@ import RegisterNavigation from '@common/navigation';
 import Text from '@/constants';
 import style from '@styles/topic.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleTopic, selectTopicSelection } from '@/store/topicSlice';
+import { toggleTopic, selectTopicSelection, selectSelectedTopicIndices } from '@/store/topicSlice';
 
 const topics = [
   { id: 0, topic: 'math and physics' },
@@ -33,7 +33,7 @@ const topics = [
 const Topics: React.FC = () => {
   const dispatch = useDispatch();
   const isSelected = useSelector(selectTopicSelection);
-  // const s = useSelector(selectSelectedTopicIndices);
+  const selectedTopics = useSelector(selectSelectedTopicIndices);
 
   return (
     <section>
@@ -58,7 +58,7 @@ const Topics: React.FC = () => {
           />
         ))}
       </div>
-      <AcceptButton link={RegisterNavigation.register.Email} isOK />
+      <AcceptButton link={RegisterNavigation.register.Email} isOK={selectedTopics.length !== 0} />
     </section>
   );
 };

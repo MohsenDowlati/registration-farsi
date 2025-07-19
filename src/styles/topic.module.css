@@ -23,5 +23,5 @@
 }
 
 .topicCardsContainer {
-  @apply flex flex-row justify-center items-center flex-wrap mx-2 h-[350px] overflow-auto;
+  @apply flex flex-row justify-center items-center flex-wrap mx-2 h-[350px] overflow-auto w-full;
 }

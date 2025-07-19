@@ -17,6 +17,8 @@ const registerNavigation = {
   },
   login: {
     Login: '/login/login',
+    Password: '/login/password',
+    OTP: '/login/entryCode',
   },
 };
 

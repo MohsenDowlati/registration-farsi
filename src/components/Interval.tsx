@@ -12,29 +12,49 @@ interface IntervalProps {
 
 // eslint-disable-next-line react/function-component-definition
 const Interval: React.FC<IntervalProps> = ({ min, max, step, onChange, initialText }) => {
+  // static amount of bars for slider
   const num = 63;
 
+  // selected bar handlers
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(start + step);
+  // number display handler
   const [floorValue, setFloorValue] = useState(min);
   const [ceilValue, setCeilValue] = useState(min + step);
+
   const [isSelected, setIsSelected] = useState(false);
 
-  const [pct, setPct] = useState(0);
+  // pct controls the triangle’s 0–1 position
+  const [pct, setPct] = useState(0.1);
+  // thumbLeftPx is the pixel‑value left offset for the thumb
+  const [thumbLeftPx, setThumbLeftPx] = useState(0);
 
   const trackRef = useRef<HTMLDivElement>(null);
+  const thumbRef = useRef<HTMLDivElement>(null);
+
   const dragging = useRef(false);
 
   const updatePct = useCallback(
     (pageX: number) => {
       const track = trackRef.current;
-      if (!track) return;
-      const { left, width } = track.getBoundingClientRect();
+      const thumb = thumbRef.current;
+      if (!track || !thumb) return;
+      const { left, width: trackW } = track.getBoundingClientRect();
+      const thumbW = thumb.getBoundingClientRect().width;
+
       let x = pageX - left;
-      if (x < 0) x = 0;
-      if (x > width) x = width;
-      const newPct = x / width;
+      const maxPct = (max - min - step) / (max - min);
+      x = Math.max(0, Math.min(x, trackW));
+      const rawPct = x / trackW;
+      const newPct = Math.min(rawPct, maxPct);
       setPct(newPct);
+      const triPx = newPct * trackW;
+      const halfThumb = thumbW / 2;
+      let desiredLeft = triPx - halfThumb;
+      const overshoot = thumbW / 7;
+      desiredLeft = Math.max(-overshoot, Math.min(desiredLeft, trackW - thumbW + overshoot));
+      setThumbLeftPx(desiredLeft);
+
       const startIdx = Math.ceil(newPct * num);
       const endIdx = Math.ceil(newPct * (num + step));
       setStart(startIdx);
@@ -78,16 +98,24 @@ const Interval: React.FC<IntervalProps> = ({ min, max, step, onChange, initialTe
       <div ref={trackRef} className="relative w-full">
         {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/click-events-have-key-events */}
         <div
+          ref={thumbRef}
           onMouseDown={onMouseDown}
-          className={`${style.intervalSlider}`}
+          className={style.intervalSlider}
           style={{
-            marginLeft: `calc(${pct * 100}% - 0.625rem)`, // 0.625rem = half of 5*0.25rem (w-5)
+            left: `${thumbLeftPx}px`,
           }}
         >
           <p className={style.intervalSliderText}>
             {isSelected ? `از ${floorValue.toString()}تا ${ceilValue.toString()} سال` : initialText}
           </p>
         </div>
+        <div
+          className={`${style.intervalSliderTriangle} bottom-0`}
+          style={{
+            left: `${pct * 100}%`,
+            transform: 'translateX(-50%)',
+          }}
+        />
       </div>
 
       {/* “36px” = half of tooltip’s width (72px) */}

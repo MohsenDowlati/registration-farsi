@@ -1,5 +1,5 @@
 import React from 'react';
-import { AcceptButton, RegNav, TypeCard } from '@/components';
+import { RegNav, TypeCard } from '@/components';
 import text from '@/constants';
 import style from '@styles/userType.module.css';
 import RegisterNavigation from '@common/navigation';
@@ -7,11 +7,31 @@ import RegisterNavigation from '@common/navigation';
 // eslint-disable-next-line react/function-component-definition
 const UserType: React.FC = () => {
   // TODO: user type
-  const colors = {
-    green: 'bg-[#0EB55B]',
-    red: 'bg-[#E60C31]',
-    pumpkin: 'bg-[#ED7D3A]',
-    blue: 'bg-[#0061FF]',
+  const types = {
+    entertainment: {
+      id: 1,
+      name: 'Entertainment',
+      text: text.userType['type-type1'],
+      color: 'bg-[#0EB55B]',
+    },
+    business: {
+      id: 2,
+      name: 'Business',
+      text: text.userType['type-type2'],
+      color: 'bg-[#E60C31]',
+    },
+    teacher: {
+      id: 3,
+      name: 'Teacher',
+      text: text.userType['type-type3'],
+      color: 'bg-[#ED7D3A]',
+    },
+    student: {
+      id: 4,
+      name: 'Student',
+      text: text.userType['type-type4'],
+      color: 'bg-[#0061FF]',
+    },
   };
 
   return (
@@ -21,12 +41,11 @@ const UserType: React.FC = () => {
         {text.userType['type-header']}
       </h1>
       <div className={style.typeCardsContainer}>
-        <TypeCard text={text.userType['type-type1']} color={colors.green} />
-        <TypeCard text={text.userType['type-type2']} color={colors.red} />
-        <TypeCard text={text.userType['type-type3']} color={colors.pumpkin} />
-        <TypeCard text={text.userType['type-type3']} color={colors.blue} />
+        <TypeCard text={types.entertainment.text} color={types.entertainment.color} />
+        <TypeCard text={types.business.text} color={types.business.color} />
+        <TypeCard text={types.teacher.text} color={types.teacher.color} />
+        <TypeCard text={types.student.text} color={types.student.color} />
       </div>
-      <AcceptButton link={RegisterNavigation.register.Topics} isOK />
     </section>
   );
 };

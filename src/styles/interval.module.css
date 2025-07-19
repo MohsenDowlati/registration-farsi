@@ -20,20 +20,12 @@
 }
 
 .intervalSlider {
-  @apply min-w-[86px] w-fit h-[44px] bg-[#933147] rounded-[7.00192px] relative p-2 flex justify-center items-center;
-  @apply before:content-['']
-  before:absolute
-  before:-bottom-1.5
+  @apply min-w-[86px] w-fit h-[44px] bg-[#933147] rounded-[7.00192px] absolute p-2 flex justify-center items-center bottom-full;
+}
 
-  before:border-solid
-  before:border-t-[8px]
-  before:border-x-[9px]
-  before:border-b-0
-  before:left-1/2
-  before:-translate-x-1/2
-
-  before:border-t-[#933147]
-  before:border-x-transparent;
+.intervalSliderTriangle {
+  @apply content-[''] absolute -bottom-1.5 border-solid border-t-[8px] border-x-[9px] border-b-0 left-1/2
+  -translate-x-1/2 border-t-[#933147] border-x-transparent;
 }
 
 .intervalSliderText {

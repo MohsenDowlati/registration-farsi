@@ -3,6 +3,7 @@ import { AcceptButton, GoogleLogin, PasswordField, PhoneField, RegNav } from '@/
 import text from '@/constants';
 import RegisterNavigation from '@common/navigation';
 import style from '@styles/login.module.css';
+import Link from 'next/link';
 
 // eslint-disable-next-line react/function-component-definition
 const Login: React.FC = () => {
@@ -29,10 +30,12 @@ const Login: React.FC = () => {
       />
       <div className={style.loginSubButtonContainer}>
         <p dir="rtl" className={style.loginSubButton}>
-          {text.login['login-forget-password']}
+          <Link href={RegisterNavigation.login.Password}>
+            {text.login['login-forget-password']}
+          </Link>
         </p>
         <p dir="rtl" className={style.loginSubButton}>
-          {text.login['login-otp']}
+          <Link href={RegisterNavigation.login.OTP}>{text.login['login-otp']}</Link>
         </p>
       </div>
       <GoogleLogin />

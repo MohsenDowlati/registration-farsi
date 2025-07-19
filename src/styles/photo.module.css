@@ -3,7 +3,7 @@
 }
 
 .photo {
- @apply object-cover;
+ @apply object-cover w-[200px] h-[200px] rounded-full flex justify-center items-center;
 }
 
 .photoHeader {
