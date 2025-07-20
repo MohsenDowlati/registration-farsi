@@ -1,4 +1,4 @@
-export default function HideSvg({ className, onClick }: cat.Svg): JSX.Element {
+export default function HideSvg({ className, onClick }: danamit.Svg): JSX.Element {
   return (
     <svg
       width="22"

@@ -3,7 +3,7 @@
  * @param  - `className` - the class name to apply to the SVG element.
  * @returns A JSX element.
  */
-export default function CrossSvg({ className }: cat.Svg): JSX.Element {
+export default function CrossSvg({ className }: danamit.Svg): JSX.Element {
   return (
     <svg
       aria-hidden="true"

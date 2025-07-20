@@ -1,4 +1,4 @@
-export default function ErrorSvg({ className }: cat.Svg): JSX.Element {
+export default function ErrorSvg({ className }: danamit.Svg): JSX.Element {
   return (
     <svg
       width="12"

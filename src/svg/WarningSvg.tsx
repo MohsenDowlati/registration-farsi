@@ -1,4 +1,4 @@
-export default function WarningSvg({ className }: cat.Svg): JSX.Element {
+export default function WarningSvg({ className }: danamit.Svg): JSX.Element {
   return (
     <svg
       width="12"

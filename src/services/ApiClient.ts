@@ -3,7 +3,7 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 class ApiClient {
   private client: AxiosInstance;
 
-  constructor(baseURL: string, headers: cat.Headers) {
+  constructor(baseURL: string, headers: danamit.Headers) {
     this.client = axios.create({
       baseURL,
       headers,

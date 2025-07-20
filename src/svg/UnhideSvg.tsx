@@ -1,4 +1,4 @@
-export default function UnhideSvg({ className, onClick }: cat.Svg): JSX.Element {
+export default function UnhideSvg({ className, onClick }: danamit.Svg): JSX.Element {
   return (
     <svg
       width="22"

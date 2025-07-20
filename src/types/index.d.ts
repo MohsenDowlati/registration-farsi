@@ -1,4 +1,4 @@
-declare namespace cat {
+declare namespace danamit {
   type Nav = {
     skip: boolean;
   };

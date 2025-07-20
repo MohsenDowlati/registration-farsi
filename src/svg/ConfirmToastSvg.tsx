@@ -1,4 +1,4 @@
-export default function ConfirmToastSvg({ className }: cat.Svg): JSX.Element {
+export default function ConfirmToastSvg({ className }: danamit.Svg): JSX.Element {
   return (
     <svg
       width="20"

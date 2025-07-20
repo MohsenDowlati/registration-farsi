@@ -1,11 +1,4 @@
-interface ArrowLeftSvgProps {
-  // eslint-disable-next-line react/require-default-props
-  className?: string;
-  // eslint-disable-next-line react/require-default-props
-  onClick?: () => void;
-}
-
-export default function ArrowLeftSvg({ className, onClick }: ArrowLeftSvgProps): JSX.Element {
+export default function ArrowLeftSvg({ className, onClick }: danamit.Svg): JSX.Element {
   return (
     <svg
       width="20"
