@@ -1,17 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import style from '@styles/interval.module.css';
 
-interface IntervalProps {
-  min: number;
-  max: number;
-  step: number;
-  // eslint-disable-next-line react/require-default-props
-  onChange?: (value: string) => void;
-  initialText: string;
-}
-
 // eslint-disable-next-line react/function-component-definition
-const Interval: React.FC<IntervalProps> = ({ min, max, step, onChange, initialText }) => {
+const Interval: React.FC<danamit.IntervalProps> = ({ min, max, step, onChange, initialText }) => {
   // static amount of bars for slider
   const num = 63;
 

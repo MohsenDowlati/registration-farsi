@@ -2,7 +2,7 @@ import React from 'react';
 import Text from '@/constants';
 import style from '@/styles/google.module.css';
 import app from '@/styles/app.module.css';
-import { SocialSvg } from '@/svg';
+import { GoogleSvg } from '@/svg';
 
 // eslint-disable-next-line react/function-component-definition
 const GoogleLogin: React.FC = () => {
@@ -17,7 +17,7 @@ const GoogleLogin: React.FC = () => {
         <p dir="rtl" className={style.googleAuthText}>
           {Text.google['google-auth']}
         </p>
-        <SocialSvg />
+        <GoogleSvg />
       </div>
     </div>
   );

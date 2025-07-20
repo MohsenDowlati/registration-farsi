@@ -34,6 +34,7 @@
     "clean": "git clean -dfX",
     "dev": "next dev -p 3000",
     "lint": "next lint --fix --max-warnings 0 .",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prepare": "husky install",
     "start": "next start -p 3000"
   },

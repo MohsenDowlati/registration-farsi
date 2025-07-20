@@ -1,17 +1,13 @@
 import React from 'react';
 import Style from '@styles/topic.module.css';
 
-interface TopicCardProps {
-  title: string;
-  key: string;
-  // eslint-disable-next-line react/require-default-props
-  onSelect?: (topic: never) => void;
-  // eslint-disable-next-line react/require-default-props
-  isSelected?: boolean;
-}
-
 // eslint-disable-next-line react/function-component-definition
-const TopicCard: React.FC<TopicCardProps> = ({ title, key, onSelect, isSelected = false }) => {
+const TopicCard: React.FC<danamit.TopicCardProps> = ({
+  title,
+  key,
+  onSelect,
+  isSelected = false,
+}) => {
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/interactive-supports-focus
     <div

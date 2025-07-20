@@ -1,18 +1,9 @@
-'use client';
-
 import React, { useEffect, useRef, useState } from 'react';
 import app from '@styles/app.module.css';
 import style from '@styles/otp.module.css';
 
-interface OTPFieldProps {
-  // eslint-disable-next-line react/require-default-props
-  length?: number;
-  isOkay: boolean;
-  onComplete: (code: string) => void;
-}
-
 // eslint-disable-next-line react/function-component-definition
-const OTPField: React.FC<OTPFieldProps> = ({ length = 6, isOkay, onComplete }) => {
+const OTPField: React.FC<danamit.OTPFieldProps> = ({ length = 6, isOkay, onComplete }) => {
   const [values, setValues] = useState<string[]>(Array(length).fill(''));
   const inputsRef = useRef<Array<HTMLInputElement | null>>([]);
 

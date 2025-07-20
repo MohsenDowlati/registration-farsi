@@ -10,6 +10,7 @@ import ConfirmToastSvg from '@svg/ConfirmToastSvg';
 import ErrorToastSvg from '@svg/ErrorToastSvg';
 import WarningToastSvg from '@svg/WarningToastSvg';
 import InfoToastSvg from '@svg/InfoToastSvg';
+import GoogleSvg from '@svg/GoogleSvg';
 
 /* Exporting the svg files from the svg folder. */
 export {
@@ -25,4 +26,5 @@ export {
   WarningToastSvg,
   InfoToastSvg,
   ErrorToastSvg,
+  GoogleSvg,
 };

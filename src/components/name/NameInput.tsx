@@ -2,17 +2,13 @@ import React, { useState } from 'react';
 import app from '@styles/app.module.css';
 import styles from '@styles/name.module.css';
 
-interface NameInputProps {
-  text: string;
-  // eslint-disable-next-line react/require-default-props
-  isValid?: boolean;
-  onChange: (value: string) => void;
-  // eslint-disable-next-line react/require-default-props
-  ltr?: boolean;
-}
-
 // eslint-disable-next-line react/function-component-definition
-const NameInput: React.FC<NameInputProps> = ({ text, isValid = true, onChange, ltr = false }) => {
+const NameInput: React.FC<danamit.NameInputProps> = ({
+  text,
+  isValid = true,
+  onChange,
+  ltr = false,
+}) => {
   const [isSelected, setIsSelected] = useState(false);
 
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {

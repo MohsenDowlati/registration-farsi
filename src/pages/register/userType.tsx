@@ -3,6 +3,7 @@ import { RegNav, TypeCard } from '@/components';
 import text from '@/constants';
 import style from '@styles/userType.module.css';
 import RegisterNavigation from '@common/navigation';
+import { useRouter } from 'next/router';
 
 // eslint-disable-next-line react/function-component-definition
 const UserType: React.FC = () => {
@@ -33,6 +34,15 @@ const UserType: React.FC = () => {
     },
   };
 
+  const router = useRouter();
+
+  const handleClick = (id: number) => {
+    router.push(RegisterNavigation.register.Topics);
+
+    // eslint-disable-next-line no-console
+    console.log(id);
+  };
+
   return (
     <section>
       <RegNav link={RegisterNavigation.register.Photo} />
@@ -40,10 +50,26 @@ const UserType: React.FC = () => {
         {text.userType['type-header']}
       </h1>
       <div className={style.typeCardsContainer}>
-        <TypeCard text={types.entertainment.text} color={types.entertainment.color} />
-        <TypeCard text={types.business.text} color={types.business.color} />
-        <TypeCard text={types.teacher.text} color={types.teacher.color} />
-        <TypeCard text={types.student.text} color={types.student.color} />
+        <TypeCard
+          text={types.entertainment.text}
+          color={types.entertainment.color}
+          onClick={() => handleClick(types.entertainment.id)}
+        />
+        <TypeCard
+          text={types.business.text}
+          color={types.business.color}
+          onClick={() => handleClick(types.business.id)}
+        />
+        <TypeCard
+          text={types.teacher.text}
+          color={types.teacher.color}
+          onClick={() => handleClick(types.teacher.id)}
+        />
+        <TypeCard
+          text={types.student.text}
+          color={types.student.color}
+          onClick={() => handleClick(types.student.id)}
+        />
       </div>
     </section>
   );

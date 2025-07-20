@@ -3,12 +3,8 @@ import Camera from '@/assets/images/camera.png';
 import style from '@styles/photo.module.css';
 import Image from 'next/image';
 
-interface PhotoHolderProps {
-  onUpload: (src: string) => void;
-}
-
 // eslint-disable-next-line react/function-component-definition
-const PhotoHolder: React.FC<PhotoHolderProps> = ({ onUpload }) => {
+const PhotoHolder: React.FC<danamit.PhotoHolderProps> = ({ onUpload }) => {
   const WIDTH = 200;
   const HEIGHT = 200;
 

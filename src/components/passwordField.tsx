@@ -3,19 +3,8 @@ import app from '@styles/app.module.css';
 import styles from '@styles/password.module.css';
 import { HideSvg, UnhideSvg } from '@/svg';
 
-interface PasswordInputProps {
-  text: string;
-  // eslint-disable-next-line react/require-default-props
-  isValid: boolean;
-  // eslint-disable-next-line react/require-default-props
-  isVisible?: boolean;
-  onChange: (value: string) => void;
-  // eslint-disable-next-line react/require-default-props
-  handleVisibility?: () => void;
-}
-
 // eslint-disable-next-line react/function-component-definition
-const PasswordField: React.FC<PasswordInputProps> = ({
+const PasswordField: React.FC<danamit.PasswordInputProps> = ({
   text,
   isValid,
   onChange,
@@ -28,7 +17,9 @@ const PasswordField: React.FC<PasswordInputProps> = ({
   const toggleVisibility = externalToggle ?? (() => setInternalVisible((v) => !v));
 
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
-    onChange(e.target.value);
+    if (onChange) {
+      onChange(e.target.value);
+    }
   }
 
   return (

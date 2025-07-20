@@ -8,14 +8,7 @@ import {
 import styles from '@styles/toast.module.css';
 import toaster from '@common/toastType';
 
-interface ToastsProps {
-  message: string;
-  setToast: (toast: boolean) => void;
-  toast: boolean;
-  type: string;
-}
-
-function Toast({ message, setToast, toast, type }: ToastsProps): JSX.Element {
+function Toast({ message, setToast, toast, type }: danamit.ToastsProps): JSX.Element {
   const handleClose = () => {
     setToast(false);
   };
