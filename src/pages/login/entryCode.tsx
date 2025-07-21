@@ -1,6 +1,6 @@
 import React from 'react';
 import { AcceptButton, OTPField, RegNav } from '@/components';
-import { registerNavigation } from '@common/navigation';
+import { RegisterNavigation } from '@common/navigation';
 import Texts from '@/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '@/store/store';
@@ -19,7 +19,7 @@ const EntryCode: React.FC = () => {
 
   return (
     <section>
-      <RegNav link={registerNavigation.login.Login} />
+      <RegNav link={RegisterNavigation.login.Login} />
       <h1 className={style.otpHeader} dir="rtl">
         {Texts.codeOTP['code-header']}{' '}
       </h1>
@@ -31,7 +31,7 @@ const EntryCode: React.FC = () => {
           {Texts.codeOTP['code-sub-link']}
         </p>
       </div>
-      <AcceptButton link={registerNavigation.boarding.Boarding} isOK={isOkay} />
+      <AcceptButton link={RegisterNavigation.boarding.Boarding} isOK={isOkay} />
     </section>
   );
 };
