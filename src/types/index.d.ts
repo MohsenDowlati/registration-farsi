@@ -6,8 +6,15 @@ declare namespace danamit {
   };
 
   type Headers = Readonly<Record<string, string | boolean>>;
-
-  interface SectionProps {
+  type BottomNavigation = Array<{
+    id: number;
+    label: string;
+    text: string;
+    href: string;
+    icon: JSX.Element;
+  }>;
+  interface PageProps {
+    title: string;
     className?: string;
     children: React.ReactNode;
   }

@@ -13,6 +13,7 @@ import TopicCard from '@components/userType/TopicCard';
 import EmailField from '@components/email/EmailField';
 import PasswordField from '@components/passwordField';
 import Meta from './Meta';
+import BottomNav from './main/BottomNav';
 
 export {
   Meta,
@@ -30,4 +31,5 @@ export {
   TopicCard,
   EmailField,
   PasswordField,
+  BottomNav,
 };

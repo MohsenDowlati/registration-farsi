@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AcceptButton, PhotoHolder, RegNav } from '@/components';
-import RegisterNavigation from '@common/navigation';
+import { RegisterNavigation } from '@common/navigation';
 import Text from '@/constants';
 import style from '@styles/photo.module.css';
 
@@ -11,7 +11,6 @@ const Photo: React.FC = () => {
     <section>
       <RegNav
         link={RegisterNavigation.register.Age}
-        skip
         linkSkip={RegisterNavigation.register.UserType}
       />
       <h1 className={style.photoHeader} dir="rtl">

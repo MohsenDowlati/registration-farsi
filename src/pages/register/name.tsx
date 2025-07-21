@@ -1,6 +1,6 @@
 import React from 'react';
 import { AcceptButton, NameInput, RegNav } from '@/components';
-import registerNavigation from '@common/navigation';
+import { RegisterNavigation } from '@common/navigation';
 import Texts from '@/constants';
 import style from '@styles/name.module.css';
 
@@ -23,7 +23,7 @@ const Name: React.FC = () => {
 
   return (
     <section>
-      <RegNav link={registerNavigation.register.Phone} />
+      <RegNav link={RegisterNavigation.register.Phone} />
       <h1 className={style.nameHeader}>{Texts.Name['name-header']}</h1>
       <div className={style.inputsContainer}>
         <NameInput
@@ -43,7 +43,7 @@ const Name: React.FC = () => {
         />
       </div>
 
-      <AcceptButton link={registerNavigation.register.Username} isOK />
+      <AcceptButton link={RegisterNavigation.register.Username} isOK />
     </section>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AcceptButton, GoogleLogin, PhoneField, RegNav } from '@/components';
 import Text from '@/constants';
 import style from '@/styles/phone.module.css';
-import registerNavigation from '@/common/navigation';
+import { RegisterNavigation } from '@/common/navigation';
 import toaster from '@common/toastType';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPhoneOK, selectPhoneValue, setPhone } from '@/store/phoneSlice';
@@ -20,7 +20,7 @@ const Phone: React.FC = () => {
 
   return (
     <section>
-      <RegNav link={registerNavigation.register.Home} />
+      <RegNav link={RegisterNavigation.register.Home} />
       <h1 className={style.headerPhone} dir="rtl">
         {Text.phone['register-phone-header']}
       </h1>
@@ -31,7 +31,7 @@ const Phone: React.FC = () => {
         </p>
       </div>
       <GoogleLogin />
-      <AcceptButton link={registerNavigation.register.EntryCode} isOK={isOK} />
+      <AcceptButton link={RegisterNavigation.register.EntryCode} isOK={isOK} />
       <Toast message="" setToast={setNeedToast} toast={needToast} type={toaster.info} />
     </section>
   );

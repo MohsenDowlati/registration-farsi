@@ -11,6 +11,11 @@ import ErrorToastSvg from '@svg/ErrorToastSvg';
 import WarningToastSvg from '@svg/WarningToastSvg';
 import InfoToastSvg from '@svg/InfoToastSvg';
 import GoogleSvg from '@svg/GoogleSvg';
+import CreateSvg from '@svg/CreateSvg';
+import ExploreSvg from '@svg/ExploreSvg';
+import GameSvg from '@svg/GameSvg';
+import HomeSvg from '@svg/HomeSvg';
+import LibrarySvg from '@svg/LibrarySvg';
 
 /* Exporting the svg files from the svg folder. */
 export {
@@ -27,4 +32,9 @@ export {
   InfoToastSvg,
   ErrorToastSvg,
   GoogleSvg,
+  CreateSvg,
+  ExploreSvg,
+  GameSvg,
+  HomeSvg,
+  LibrarySvg,
 };

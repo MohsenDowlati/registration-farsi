@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { RegNav, Interval, AcceptButton } from '@/components';
-import RegisterNavigation from '@common/navigation';
+import { RegisterNavigation } from '@common/navigation';
 import Text from '@/constants';
 import style from '@styles/age.module.css';
 import { useDispatch, useSelector } from 'react-redux';

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Button, RegNav } from '@/components';
-import RegisterNavigation from '@common/navigation';
+import { RegisterNavigation } from '@common/navigation';
 import style from '@styles/boarding.module.css';
 import Image from 'next/image';
 import text from '@/constants';

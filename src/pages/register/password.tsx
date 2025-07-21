@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AcceptButton, PasswordField, RegNav } from '@/components';
-import RegisterNavigation from '@common/navigation';
+import { RegisterNavigation } from '@common/navigation';
 import Text from '@/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AcceptButton, OTPField, RegNav } from '@/components';
-import registerNavigation from '@common/navigation';
+import { registerNavigation } from '@common/navigation';
 import Texts from '@/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '@/store/store';

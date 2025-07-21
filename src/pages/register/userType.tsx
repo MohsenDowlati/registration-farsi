@@ -2,7 +2,7 @@ import React from 'react';
 import { RegNav, TypeCard } from '@/components';
 import text from '@/constants';
 import style from '@styles/userType.module.css';
-import RegisterNavigation from '@common/navigation';
+import { RegisterNavigation } from '@common/navigation';
 import { useRouter } from 'next/router';
 
 // eslint-disable-next-line react/function-component-definition

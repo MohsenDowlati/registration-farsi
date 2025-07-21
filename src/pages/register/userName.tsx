@@ -1,7 +1,7 @@
 import React from 'react';
 import { AcceptButton, NameInput, RegNav } from '@/components';
 import style from '@styles/name.module.css';
-import RegisterNavigation from '@/common/navigation';
+import { RegisterNavigation } from '@/common/navigation';
 import Texts from '@/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '@/store/store';

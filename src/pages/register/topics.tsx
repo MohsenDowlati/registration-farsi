@@ -1,6 +1,6 @@
 import React from 'react';
 import { AcceptButton, RegNav, TopicCard } from '@/components';
-import RegisterNavigation from '@common/navigation';
+import { RegisterNavigation } from '@common/navigation';
 import Text from '@/constants';
 import style from '@styles/topic.module.css';
 import { useDispatch, useSelector } from 'react-redux';

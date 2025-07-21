@@ -1,7 +1,7 @@
 import React from 'react';
 import { AcceptButton, GoogleLogin, PasswordField, PhoneField, RegNav } from '@/components';
 import text from '@/constants';
-import RegisterNavigation from '@common/navigation';
+import { RegisterNavigation } from '@common/navigation';
 import style from '@styles/login.module.css';
 import Link from 'next/link';
 
@@ -27,6 +27,7 @@ const Login: React.FC = () => {
           console.log('s');
         }}
         isValid
+        isVisible={false}
       />
       <div className={style.loginSubButtonContainer}>
         <p dir="rtl" className={style.loginSubButton}>

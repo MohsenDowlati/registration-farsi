@@ -1,6 +1,6 @@
 import React from 'react';
 import { AcceptButton, EmailField, RegNav } from '@/components';
-import RegisterNavigation from '@common/navigation';
+import { RegisterNavigation } from '@common/navigation';
 import Text from '@/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectEmailOK, setEmail } from '@/store/emailSlice';
@@ -16,7 +16,6 @@ const Email: React.FC = () => {
     <section>
       <RegNav
         link={RegisterNavigation.register.Topics}
-        skip
         linkSkip={RegisterNavigation.register.Password}
       />
       <h1 className={style.topicHeader}>{Text.email['email-header']}</h1>
