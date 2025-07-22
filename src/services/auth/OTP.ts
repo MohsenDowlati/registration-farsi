@@ -3,10 +3,9 @@ import endpoints from '@services/endpoint';
 
 export const postOTP = async (data: body.OTPRequest) => {
   try {
-    console.log('🔍 Requesting OTP:', { 
+    console.log('🔍 Requesting OTP via proxy:', { 
       endpoint: endpoints.auth.request_otp, 
-      data,
-      baseURL: 'https://danamit-auth-service.liara.run/api'
+      data
     });
     
     const response = await http.post(endpoints.auth.request_otp, data);
@@ -21,10 +20,9 @@ export const postOTP = async (data: body.OTPRequest) => {
 
 export const verifyOTP = async (data: body.OTPVerify) => {
   try {
-    console.log('🔍 Verifying OTP:', { 
+    console.log('🔍 Verifying OTP via proxy:', { 
       endpoint: endpoints.auth.verify_otp, 
-      data,
-      baseURL: 'https://danamit-auth-service.liara.run/api'
+      data
     });
     
     const response = await http.post(endpoints.auth.verify_otp, data);

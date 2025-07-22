@@ -3,39 +3,57 @@ import axios from 'axios';
 
 const API_BASE_URL = 'https://danamit-auth-service.liara.run/api';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { path } = req.query;
   
-  // Construct the target URL
-  const targetPath = Array.isArray(path) ? path.join('/') : path || '';
-  const targetUrl = `${API_BASE_URL}/${targetPath}`;
+  if (!Array.isArray(path)) {
+    return res.status(400).json({ error: 'Invalid path' });
+  }
+
+  const apiPath = path.join('/');
+  const targetUrl = `${API_BASE_URL}/${apiPath}`;
 
   try {
-    // Forward the request to the external API
+    console.log(`🔄 Proxying ${req.method} request to: ${targetUrl}`);
+    console.log('📝 Request body:', req.body);
+
     const response = await axios({
       method: req.method,
       url: targetUrl,
       data: req.body,
       headers: {
         'Content-Type': 'application/json',
-        // Forward any authorization headers
-        ...(req.headers.authorization && { Authorization: req.headers.authorization }),
+        // Forward authorization header if present
+        ...(req.headers.authorization && {
+          Authorization: req.headers.authorization,
+        }),
       },
+      timeout: 10000,
     });
 
-    // Return the response from the external API
+    console.log('✅ Proxy response successful:', {
+      status: response.status,
+      data: response.data,
+    });
+
+    // Forward the response
     res.status(response.status).json(response.data);
   } catch (error: any) {
-    console.error('Proxy API Error:', error.response?.data || error.message);
+    console.error('❌ Proxy error:', error.message);
     
     if (error.response) {
-      // Forward the error response from the external API
+      console.error('📊 Error response:', {
+        status: error.response.status,
+        data: error.response.data,
+      });
       res.status(error.response.status).json(error.response.data);
     } else {
-      // Handle network or other errors
       res.status(500).json({ 
-        message: 'Internal Server Error', 
-        error: error.message 
+        error: 'Internal server error',
+        message: error.message 
       });
     }
   }
