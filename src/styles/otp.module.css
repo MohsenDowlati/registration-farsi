@@ -1,5 +1,5 @@
 .otpInput {
-  @apply w-[20px] h-[20px] flex justify-center items-center placeholder-[#7D7D7D] bg-[#232323] font-manrope font-normal text-base leading-6 order-1 focus:outline-none focus:ring-0 text-center;
+  @apply w-[20px] h-[20px] flex justify-center items-center placeholder-[#7D7D7D] bg-[#232323] font-manrope font-normal text-base leading-6 order-1 focus:outline-none focus:ring-0 text-center caret-transparent;
 }
 
 .otpHeader {

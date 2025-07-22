@@ -7,6 +7,8 @@ import toaster from '@common/toastType';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPhoneOK, selectPhoneValue, setPhone } from '@/store/phoneSlice';
 import Toast from '@components/Toast';
+import { postOTP } from '@services/auth/OTP';
+import axios from 'axios';
 
 // eslint-disable-next-line react/function-component-definition
 const Phone: React.FC = () => {
@@ -15,6 +17,31 @@ const Phone: React.FC = () => {
   const isOK = useSelector(selectPhoneOK);
 
   const [needToast, setNeedToast] = useState(false);
+  const [message, setMessage] = useState('');
+  const [toasterType, setToasterType] = useState('');
+
+  const handleOTP = async (): Promise<boolean> => {
+    const payload = { phoneNumber: phone, purpose: 'registration' };
+    try {
+      const { status } = await postOTP(payload);
+      if (status === 200) {
+        return true;
+      }
+    } catch (error: unknown) {
+      let msg: string;
+      if (axios.isAxiosError(error)) {
+        msg = (error.response?.data as { message?: string })?.message || error.message;
+      } else if (error instanceof Error) {
+        msg = error.message;
+      } else {
+        msg = String(error);
+      }
+      setMessage(msg);
+      setToasterType(toaster.danger);
+      setNeedToast(true);
+    }
+    return false;
+  };
 
   useEffect(() => {}, [phone, isOK]);
 
@@ -31,8 +58,12 @@ const Phone: React.FC = () => {
         </p>
       </div>
       <GoogleLogin />
-      <AcceptButton link={RegisterNavigation.register.EntryCode} isOK={isOK} />
-      <Toast message="" setToast={setNeedToast} toast={needToast} type={toaster.info} />
+      <AcceptButton
+        link={RegisterNavigation.register.EntryCode}
+        isOK={isOK}
+        handleAPI={handleOTP}
+      />
+      <Toast message={message} setToast={setNeedToast} toast={needToast} type={toasterType} />
     </section>
   );
 };

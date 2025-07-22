@@ -8,7 +8,8 @@ const PhoneField: React.FC<danamit.PhoneFieldProps> = ({ onChange, isOK }) => {
   const [isSelected, setSelected] = useState(false);
 
   function handlePhone(e: React.ChangeEvent<HTMLInputElement>) {
-    onChange(e.target.value);
+    const digits = e.target.value.replace(/\D/g, '');
+    onChange(digits);
   }
 
   return (
@@ -29,6 +30,11 @@ const PhoneField: React.FC<danamit.PhoneFieldProps> = ({ onChange, isOK }) => {
         inputMode="numeric"
         onChange={handlePhone}
         placeholder={Text.phone['register-phone-default-number']}
+        onKeyDown={(e) => {
+          if (!/[0-9]/.test(e.key) && e.key !== 'Backspace') {
+            e.preventDefault();
+          }
+        }}
         required
       />
     </div>

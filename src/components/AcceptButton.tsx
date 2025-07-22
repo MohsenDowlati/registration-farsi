@@ -4,12 +4,15 @@ import app from '@/styles/app.module.css';
 import { useRouter } from 'next/router';
 
 // eslint-disable-next-line react/function-component-definition
-const AcceptButton: React.FC<danamit.AcceptButtonProps> = ({ link, isOK }) => {
+const AcceptButton: React.FC<danamit.AcceptButtonProps> = ({ link, isOK, handleAPI }) => {
   const router = useRouter();
-  const handleNavigation = () => {
-    if (isOK) {
-      router.push(link);
+  const handleNavigation = async () => {
+    if (handleAPI) {
+      const ok = await handleAPI();
+      if (!ok) return;
     }
+    // Success path: navigate
+    await router.push(link);
   };
   return (
     <button

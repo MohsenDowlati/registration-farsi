@@ -5,7 +5,6 @@ declare namespace danamit {
     Boom: string;
   };
 
-  type Headers = Readonly<Record<string, string | boolean>>;
   type BottomNavigation = Array<{
     id: number;
     label: string;
@@ -61,6 +60,7 @@ declare namespace danamit {
   interface AcceptButtonProps {
     link: string;
     isOK: boolean;
+    handleAPI?: () => Promise<boolean>;
   }
 
   interface TypeCardProps {

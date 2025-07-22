@@ -19,7 +19,7 @@
 }
 
 .content {
-  @apply ml-3 text-sm font-normal;
+  @apply ml-3 text-sm font-normal mr-3 text-white;
 }
 
 .icon {
