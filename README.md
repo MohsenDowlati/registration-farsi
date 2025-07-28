@@ -1,4 +1,4 @@
-# Danamit 🚀
+# Sign UP AND LOGIN 🚀
 
 A modern Progressive Web Application (PWA) built with Next.js, TypeScript, and Tailwind CSS. Danamit provides a comprehensive authentication system with OTP verification, user registration, and modern UI components.
 
@@ -420,4 +420,4 @@ If you have any questions or need help:
 
 ---
 
-**Happy Coding! 🎉**
+**Some Shit Developed By MOHSEN! 🎉**
